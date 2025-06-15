@@ -1,17 +1,45 @@
 import { useLanguage } from '../useLanguage'
 
 const letters = [
-  ['Ա', 'A', 'Айб'],
-  ['Բ', 'B', 'Ben'],
-  ['Գ', 'G', 'Gim'],
-  ['Դ', 'D', 'Да'],
-  ['Ե', 'Ye', 'Еч'],
-  ['Զ', 'Z', 'За'],
-  ['Է', 'E', 'Э'],
-  ['Ը', 'Ə', 'Ət'],
-  ['Թ', 'Tʿ', 'Тхо'],
-  ['Ժ', 'Zh', 'Же'],
-  // ... add rest if needed
+  ['Ա', 'ա', 'A', 'Айб'],
+  ['Բ', 'բ', 'B', 'Бен'],
+  ['Գ', 'գ', 'G', 'Гим'],
+  ['Դ', 'դ', 'D', 'Да'],
+  ['Ե', 'ե', 'Ye', 'Еч'],
+  ['Զ', 'զ', 'Z', 'За'],
+  ['Է', 'է', 'E', 'Э'],
+  ['Ը', 'ը', 'Ə', 'Эт'],
+  ['Թ', 'թ', 'Tʿ', 'Тхо'],
+  ['Ժ', 'ժ', 'Zh', 'Же'],
+  ['Ի', 'ի', 'I', 'Ини'],
+  ['Լ', 'լ', 'L', 'Люн'],
+  ['Խ', 'խ', 'Kh', 'Хе'],
+  ['Ծ', 'ծ', 'Ts', 'Цо'],
+  ['Կ', 'կ', 'K', 'Кен'],
+  ['Հ', 'հ', 'H', 'Хо'],
+  ['Ձ', 'ձ', 'Dz', 'Дза'],
+  ['Ղ', 'ղ', 'Gh', 'Гат'],
+  ['Ճ', 'ճ', 'Ch', 'Че'],
+  ['Մ', 'մ', 'M', 'Мен'],
+  ['Յ', 'յ', 'Y', 'Йи'],
+  ['Ն', 'ն', 'N', 'Ну'],
+  ['Շ', 'շ', 'Sh', 'Ша'],
+  ['Ո', 'ո', 'Vo', 'Во'],
+  ['Չ', 'չ', 'Chʿ', 'Ча'],
+  ['Պ', 'պ', 'P', 'Пе'],
+  ['Ջ', 'ջ', 'J', 'Дже'],
+  ['Ռ', 'ռ', 'Rr', 'Ра'],
+  ['Ս', 'ս', 'S', 'Се'],
+  ['Վ', 'վ', 'V', 'Вев'],
+  ['Տ', 'տ', 'T', 'Тюн'],
+  ['Ր', 'ր', 'R', 'Ре'],
+  ['Ց', 'ց', 'Tsʿ', 'Цо'],
+  ['Ու', 'ու', 'U', 'У'],
+  ['Փ', 'փ', 'Pʿ', 'Пюр'],
+  ['Ք', 'ք', 'Kʿ', 'Кʼе'],
+  ['ԵՎ', 'և', 'Yev', 'Ев'],
+  ['Օ', 'օ', 'O', 'О'],
+  ['Ֆ', 'ֆ', 'F', 'Фе'],
 ]
 
 export default function AlphabetPage() {
@@ -23,14 +51,16 @@ export default function AlphabetPage() {
         <thead>
           <tr>
             <th className="border px-2">{t('letter')}</th>
+            <th className="border px-2">{t('lowercase')}</th>
             <th className="border px-2">{t('latin')}</th>
             <th className="border px-2">{t('russian')}</th>
           </tr>
         </thead>
         <tbody>
-          {letters.map(([arm, en, ru]) => (
-            <tr key={arm}>
-              <td className="border px-2 text-center text-2xl">{arm}</td>
+          {letters.map(([armUpper, armLower, en, ru]) => (
+            <tr key={armUpper}>
+              <td className="border px-2 text-center text-2xl">{armUpper}</td>
+              <td className="border px-2 text-center text-2xl">{armLower}</td>
               <td className="border px-2">{en}</td>
               <td className="border px-2">{ru}</td>
             </tr>
