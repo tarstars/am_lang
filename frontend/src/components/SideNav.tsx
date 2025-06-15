@@ -1,40 +1,51 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useLanguage } from '../useLanguage'
 
 export default function SideNav() {
   const { lang, setLang, t } = useLanguage()
+  const location = useLocation()
+
+  const items = [
+    { to: '/alphabet', label: t('nav_alphabet') },
+    { to: '/words', label: t('nav_words') },
+    { to: '/phrases', label: t('nav_phrases') },
+  ]
+
   return (
-    <nav className="w-48 bg-gray-100 min-h-screen p-4 flex flex-col gap-4">
-      <div className="flex justify-between items-center">
-        <Link to="/" className="font-semibold">
+    <nav className="fixed w-64 min-h-screen bg-sky-200 text-blue-900 p-6 flex flex-col justify-between">
+      <div>
+        <Link to="/" className="block uppercase font-bold mb-4">
           {t('welcome_title')}
         </Link>
         <select
-          className="border px-2 py-1 text-sm"
+          className="mb-6 bg-sky-100 border rounded px-2 py-1 text-sm w-full"
           value={lang}
           onChange={(e) => setLang(e.target.value as 'en' | 'ru')}
         >
           <option value="en">EN</option>
           <option value="ru">RU</option>
         </select>
+        <ul className="space-y-2">
+          {items.map(({ to, label }) => {
+            const active = location.pathname === to
+            return (
+              <li key={to}>
+                <Link
+                  to={to}
+                  className={`block px-3 py-2 rounded uppercase ${active ? 'bg-blue-300 text-white' : 'hover:bg-sky-300'}`}
+                >
+                  {label}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
       </div>
       <Link
         to="/alphabet"
-        className="block bg-blue-500 hover:bg-blue-600 text-white rounded px-3 py-2 text-center"
+        className="mt-6 block text-center bg-white text-blue-800 font-bold border border-blue-800 rounded py-3 hover:bg-blue-50"
       >
-        {t('nav_alphabet')}
-      </Link>
-      <Link
-        to="/words"
-        className="block bg-blue-500 hover:bg-blue-600 text-white rounded px-3 py-2 text-center"
-      >
-        {t('nav_words')}
-      </Link>
-      <Link
-        to="/phrases"
-        className="block bg-blue-500 hover:bg-blue-600 text-white rounded px-3 py-2 text-center"
-      >
-        {t('nav_phrases')}
+        Start Learning
       </Link>
     </nav>
   )
