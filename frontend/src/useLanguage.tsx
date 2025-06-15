@@ -23,7 +23,7 @@ const strings: Record<Lang, Record<string, string>> = {
     russian: 'Russian phonetic',
   },
   ru: {
-    welcome_title: 'Добро пожаловать в инструменты армянского языка',
+    welcome_title: 'Добро пожаловать в тренажеры армянского языка',
     welcome_desc: 'Этот сервис помогает начинающим изучать армянский язык на русском и английском.',
     nav_alphabet: 'Тренажер алфавита',
     nav_words: 'Тренажер слов',
