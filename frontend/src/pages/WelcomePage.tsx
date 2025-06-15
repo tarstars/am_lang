@@ -10,7 +10,7 @@ export default function WelcomePage() {
       <img
         src={boarImg}
         alt="Little boar"
-        className="absolute right-4 bottom-4 w-40"
+        className="fixed right-4 bottom-4 w-40"
       />
       <h1 className="text-4xl font-bold">{t('welcome_title')}</h1>
       <p className="text-2xl text-left max-w-prose">{t('welcome_desc')}</p>
