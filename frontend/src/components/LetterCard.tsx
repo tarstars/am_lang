@@ -4,14 +4,19 @@ export interface LetterCardProps {
   symbol: string
   nameEn: string
   nameRu: string
-  audioURL: string
 }
 
-export default function LetterCard({ symbol, nameEn, nameRu, audioURL }: LetterCardProps) {
+export default function LetterCard({ symbol, nameEn, nameRu }: LetterCardProps) {
   const audioRef = useRef<HTMLAudioElement>(null)
 
-  const playAudio = () => {
-    audioRef.current?.play()
+  const playAudio = async () => {
+    const res = await fetch(`/tts?text=${encodeURIComponent(symbol)}`)
+    if (!res.ok) return
+    const data = await res.json()
+    if (audioRef.current) {
+      audioRef.current.src = 'data:audio/mp3;base64,' + data.audioContent
+      audioRef.current.play()
+    }
   }
 
   return (
@@ -25,7 +30,7 @@ export default function LetterCard({ symbol, nameEn, nameRu, audioURL }: LetterC
       >
         Play
       </button>
-      <audio ref={audioRef} src={audioURL} />
+      <audio ref={audioRef} />
     </div>
   )
 }

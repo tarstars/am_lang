@@ -9,9 +9,12 @@ CORS(app)
 
 client = texttospeech.TextToSpeechClient()
 
+LANGUAGE_CODE = os.environ.get("TTS_LANGUAGE_CODE", "ru-RU")
+VOICE_NAME = os.environ.get("TTS_VOICE_NAME", "ru-RU-Wavenet-A")
+
 def synthesize(text: str) -> bytes:
     input_text = texttospeech.SynthesisInput(text=text)
-    voice = texttospeech.VoiceSelectionParams(language_code="ru-RU", name="ru-RU-Wavenet-A")
+    voice = texttospeech.VoiceSelectionParams(language_code=LANGUAGE_CODE, name=VOICE_NAME)
     audio_config = texttospeech.AudioConfig(audio_encoding=texttospeech.AudioEncoding.MP3)
     response = client.synthesize_speech(input=input_text, voice=voice, audio_config=audio_config)
     return response.audio_content
