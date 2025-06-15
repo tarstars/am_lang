@@ -2,9 +2,31 @@
 frontend/node_modules/
 frontend/dist/
 
+# Build output
+frontend/.next/
+frontend/.turbo/
+
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+venv/
 
 # Env files
 .env
+*.env
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Coverage reports
+coverage/
