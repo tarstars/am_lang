@@ -14,6 +14,10 @@ cd frontend
 npm install
 npm run dev
 ```
+If you see an error mentioning `@tailwindcss/postcss` when starting Vite,
+double-check that `npm install` completed successfully. The Tailwind PostCSS
+plugin is installed as a development dependency and is required for builds to
+work correctly.
 
 ## Backend
 - Python 3.11 Flask API
