@@ -1,4 +1,17 @@
+import { useState } from 'react'
 import { useLanguage } from '../useLanguage'
+import polarOwl from '../assets/polar_owl.webp'
+import LetterModal, { LetterInfo } from '../components/LetterModal'
+
+const letterInfoMap: Record<string, LetterInfo> = {
+  Բ: {
+    image: polarOwl,
+    wordUpper: ['Բ', 'ՈՒ'],
+    wordLower: ['բ', 'ու'],
+    soundRu: ['Б', 'У'],
+    soundEn: ['b', 'oo'],
+  },
+}
 
 const letters = [
   ['Ա', 'ա', 'A', 'Айб'],
@@ -44,6 +57,13 @@ const letters = [
 
 export default function AlphabetPage() {
   const { t } = useLanguage()
+  const [active, setActive] = useState<LetterInfo | null>(null)
+
+  const openInfo = (letter: string) => {
+    const info = letterInfoMap[letter]
+    if (info) setActive(info)
+  }
+
   return (
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4">{t('alphabet_title')}</h1>
@@ -59,7 +79,12 @@ export default function AlphabetPage() {
         <tbody>
           {letters.map(([armUpper, armLower, en, ru]) => (
             <tr key={armUpper}>
-              <td className="border px-2 text-center text-2xl">{armUpper}</td>
+              <td
+                className="border px-2 text-center text-2xl cursor-pointer hover:bg-sky-100"
+                onClick={() => openInfo(armUpper)}
+              >
+                {armUpper}
+              </td>
               <td className="border px-2 text-center text-2xl">{armLower}</td>
               <td className="border px-2">{en}</td>
               <td className="border px-2">{ru}</td>
@@ -67,6 +92,9 @@ export default function AlphabetPage() {
           ))}
         </tbody>
       </table>
+      {active && (
+        <LetterModal info={active} onClose={() => setActive(null)} />
+      )}
     </div>
   )
 }
