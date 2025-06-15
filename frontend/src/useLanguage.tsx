@@ -21,6 +21,7 @@ const strings: Record<Lang, Record<string, string>> = {
     letter: 'Letter',
     latin: 'Latin',
     russian: 'Russian phonetic',
+    lowercase: 'Lowercase',
   },
   ru: {
     welcome_title: 'Добро пожаловать в тренажеры армянского языка',
@@ -35,6 +36,7 @@ const strings: Record<Lang, Record<string, string>> = {
     letter: 'Буква',
     latin: 'Латиница',
     russian: 'Русская фонетика',
+    lowercase: 'строчная',
   },
 }
 
