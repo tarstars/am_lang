@@ -30,3 +30,5 @@ logs/
 
 # Coverage reports
 coverage/
+.firebase
+api/google-cloud-sdk
