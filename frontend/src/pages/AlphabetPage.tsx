@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useLanguage } from '../useLanguage'
 import polarOwl from '../assets/polar_owl.webp'
-import LetterModal, { LetterInfo } from '../components/LetterModal'
+import LetterModal from '../components/LetterModal'
+import type { LetterInfo } from '../components/LetterModal'
 
 const letterInfoMap: Record<string, LetterInfo> = {
   Բ: {
