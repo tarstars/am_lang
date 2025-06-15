@@ -11,6 +11,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
+        <div className="bg-red-500 text-white p-4">TEST</div>
         <div className="flex min-h-screen">
           <SideNav />
           <div className="flex-1 ml-64">
