@@ -39,6 +39,7 @@ const baseMap: [string, string, string][] = [
   ['Ր', 'r', 'р'],
   ['Ց', "ts'", 'ц'],
   ['Ու', 'oo', 'у'],
+  ['ՈՒ', 'oo', 'у'],
   ['Փ', "p'", 'п'],
   ['Ք', "k'", 'к'],
   ['ԵՎ', 'yev', 'ев'],
@@ -53,7 +54,7 @@ for (const [upper, en, ru] of baseMap) {
   letterMap[lower] = { en, ru }
 }
 
-const digraphs = ['Ու', 'ու', 'ԵՎ', 'և']
+const digraphs = ['Ու', 'ու', 'ՈՒ', 'ԵՎ', 'և']
 
 export function transliterate(text: string, lang: TranslitLang): string {
   let result = ''
