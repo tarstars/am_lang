@@ -34,131 +34,183 @@ const wordInfoMap: Record<string, WordInfo> = {
     image: polarOwl,
     wordUpper: ['Բ', 'ՈՒ'],
     wordLower: ['բ', 'ու'],
+    soundRu: ["б", "у"],
+    soundEn: ["b", "u"],
   },
     Ա: {
     image: appleImg,
     wordUpper: ["Խ", "Ն", "Ձ", "Ո", "Ր"],
     wordLower: ["խ", "ն", "ձ", "ո", "ր"],
+      soundRu: ["х", "н", "дз", "о", "р"],
+      soundEn: ["kh", "n", "dz", "o", "r"],
   },
     Գ: {
     image: apricotImg,
     wordUpper: ["Ծ", "Ի", "Ր", "Ա", "Ն"],
     wordLower: ["ծ", "ի", "ր", "ա", "ն"],
+      soundRu: ["ц", "и", "р", "а", "н"],
+      soundEn: ["ts", "i", "r", "a", "n"],
   },
     Դ: {
     image: bookImg,
     wordUpper: ["Գ", "Ի", "Ր", "Ք"],
     wordLower: ["գ", "ի", "ր", "ք"],
+      soundRu: ["г", "и", "р", "к"],
+      soundEn: ["g", "i", "r", "k'"],
   },
     Ե: {
     image: bugImg,
     wordUpper: ["Բ", "Զ", "Ե", "Զ"],
     wordLower: ["բ", "զ", "ե", "զ"],
+      soundRu: ["б", "з", "е", "з"],
+      soundEn: ["b", "z", "e", "z"],
   },
     Զ: {
     image: catImg,
     wordUpper: ["Կ", "Ա", "Տ", "ՈՒ"],
     wordLower: ["կ", "ա", "տ", "ու"],
+      soundRu: ["к", "а", "т", "у"],
+      soundEn: ["k", "a", "t", "u"],
   },
     Է: {
     image: doorImg,
     wordUpper: ["Դ", "ՈՒ", "Ռ"],
     wordLower: ["դ", "ու", "ռ"],
+      soundRu: ["д", "у", "р"],
+      soundEn: ["d", "u", "rr"],
   },
     Ը: {
     image: earthImg,
     wordUpper: ["Ե", "Ր", "Կ", "Ի", "Ր"],
     wordLower: ["ե", "ր", "կ", "ի", "ր"],
+      soundRu: ["е", "р", "к", "и", "р"],
+      soundEn: ["ye", "r", "k", "i", "r"],
   },
     Թ: {
     image: electricCurrentImg,
     wordUpper: ["Հ", "Ո", "Ս", "Ա", "Ն", "Ք"],
     wordLower: ["հ", "ո", "ս", "ա", "ն", "ք"],
+      soundRu: ["х", "о", "с", "а", "н", "к"],
+      soundEn: ["h", "o", "s", "a", "n", "k'"],
   },
     Ժ: {
     image: girafImg,
     wordUpper: ["Ը", "Ն", "Ձ", "ՈՒ", "Ղ", "Տ"],
     wordLower: ["ը", "ն", "ձ", "ու", "ղ", "տ"],
+      soundRu: ["э", "н", "дз", "у", "г", "т"],
+      soundEn: ["ə", "n", "dz", "u", "gh", "t"],
   },
     Ի: {
     image: houseImg,
     wordUpper: ["Տ", "ՈՒ", "Ն"],
     wordLower: ["տ", "ու", "ն"],
+      soundRu: ["т", "у", "н"],
+      soundEn: ["t", "u", "n"],
   },
     Լ: {
     image: incubatorImg,
     wordUpper: ["Ի", "Ն", "Կ", "ՈՒ", "Բ", "Ա", "Տ", "Ո", "Ր"],
     wordLower: ["ի", "ն", "կ", "ու", "բ", "ա", "տ", "ո", "ր"],
+      soundRu: ["и", "н", "к", "у", "б", "а", "т", "о", "р"],
+      soundEn: ["i", "n", "k", "u", "b", "a", "t", "o", "r"],
   },
     Խ: {
     image: jewelryImg,
     wordUpper: ["Զ", "Ա", "Ր", "Դ"],
     wordLower: ["զ", "ա", "ր", "դ"],
+      soundRu: ["з", "а", "р", "д"],
+      soundEn: ["z", "a", "r", "d"],
   },
     Ծ: {
     image: lightImg,
     wordUpper: ["Լ", "ՈՒ", "Յ", "Ս"],
     wordLower: ["լ", "ու", "յ", "ս"],
+      soundRu: ["л", "у", "й", "с"],
+      soundEn: ["l", "u", "y", "s"],
   },
     Կ: {
     image: lunchImg,
     wordUpper: ["Ճ", "Ա", "Շ"],
     wordLower: ["ճ", "ա", "շ"],
+      soundRu: ["ч", "а", "ш"],
+      soundEn: ["ch", "a", "sh"],
   },
     Հ: {
     image: parrotImg,
     wordUpper: ["Թ", "ՈՒ", "Թ", "Ա", "Կ"],
     wordLower: ["թ", "ու", "թ", "ա", "կ"],
+      soundRu: ["т", "у", "т", "а", "к"],
+      soundEn: ["t'", "u", "t'", "a", "k"],
   },
     Ձ: {
     image: pourImg,
     wordUpper: ["Լ", "Ց", "Ն", "Ե", "Լ"],
     wordLower: ["լ", "ց", "ն", "ե", "լ"],
+      soundRu: ["л", "ц", "н", "е", "л"],
+      soundEn: ["l", "ts'", "n", "e", "l"],
   },
     Ղ: {
     image: raisinImg,
     wordUpper: ["Չ", "Ա", "Մ", "Ի", "Չ"],
     wordLower: ["չ", "ա", "մ", "ի", "չ"],
+      soundRu: ["ч", "а", "м", "и", "ч"],
+      soundEn: ["ch'", "a", "m", "i", "ch'"],
   },
     Ճ: {
     image: steeringWheelImg,
     wordUpper: ["Ղ", "Ե", "Կ"],
     wordLower: ["ղ", "ե", "կ"],
+      soundRu: ["г", "е", "к"],
+      soundEn: ["gh", "e", "k"],
   },
     Պ: {
     image: cheeseImg,
     wordUpper: ["Պ", "Ա", "Ն", "Ի", "Ր"],
     wordLower: ["պ", "ա", "ն", "ի", "ր"],
+      soundRu: ["п", "а", "н", "и", "р"],
+      soundEn: ["p", "a", "n", "i", "r"],
   },
     Ց: {
     image: bullImg,
     wordUpper: ["Ց", "ՈՒ", "Լ"],
     wordLower: ["ց", "ու", "լ"],
+      soundRu: ["ц", "у", "л"],
+      soundEn: ["ts'", "u", "l"],
   },
     Ջ: {
     image: waterImg,
     wordUpper: ["Ջ", "ՈՒ", "Ր"],
     wordLower: ["ջ", "ու", "ր"],
+      soundRu: ["дж", "у", "р"],
+      soundEn: ["j", "u", "r"],
   },
     Ռ: {
     image: robotImg,
     wordUpper: ["Ռ", "Ո", "Բ", "Ո", "Տ"],
     wordLower: ["ռ", "ո", "բ", "ո", "տ"],
+      soundRu: ["р", "о", "б", "о", "т"],
+      soundEn: ["rr", "o", "b", "o", "t"],
   },
     Վ: {
     image: roseImg,
     wordUpper: ["Վ", "Ա", "Ր", "Դ"],
     wordLower: ["վ", "ա", "ր", "դ"],
+      soundRu: ["в", "а", "р", "д"],
+      soundEn: ["v", "a", "r", "d"],
   },
     Ք: {
     image: stoneImg,
     wordUpper: ["Ք", "Ա", "Ր"],
     wordLower: ["ք", "ա", "ր"],
+      soundRu: ["к", "а", "р"],
+      soundEn: ["k'", "a", "r"],
   },
     Օ: {
     image: snakeImg,
     wordUpper: ["Օ", "Ձ"],
     wordLower: ["օ", "ձ"],
+      soundRu: ["о", "дз"],
+      soundEn: ["o", "dz"],
   },
 }
 
@@ -215,8 +267,10 @@ export default function AlphabetPage() {
   const openInfo = (letter: string) => {
     const info = wordInfoMap[letter]
     if (info) {
-      const soundRu = info.wordUpper.map((l) => letterSoundMap[l]?.ru ?? '')
-      const soundEn = info.wordUpper.map((l) => letterSoundMap[l]?.en ?? '')
+      const soundRu =
+        info.soundRu ?? info.wordUpper.map((l) => letterSoundMap[l]?.ru ?? '')
+      const soundEn =
+        info.soundEn ?? info.wordUpper.map((l) => letterSoundMap[l]?.en ?? '')
       setActive({ ...info, soundRu, soundEn })
     }
   }
