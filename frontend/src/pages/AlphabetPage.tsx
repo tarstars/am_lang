@@ -255,7 +255,7 @@ const wordInfoMap: Record<string, WordInfo> = {
       wordRu: "камень",
       wordEn: "stone",
   },
-    Օ: {
+  Օ: {
     image: snakeImg,
     wordUpper: ["Օ", "Ձ"],
     wordLower: ["օ", "ձ"],
@@ -265,6 +265,14 @@ const wordInfoMap: Record<string, WordInfo> = {
       wordEn: "snake",
   },
 }
+
+export const wordInfoByFirstLetter: Record<string, WordInfo[]> = Object.values(
+  wordInfoMap,
+).reduce((acc, info) => {
+  const initial = info.wordUpper[0]
+  ;(acc[initial] ??= []).push(info)
+  return acc
+}, {} as Record<string, WordInfo[]>)
 
 const letters = [
   ['Ա', 'ա', 'A', 'Айб'],
