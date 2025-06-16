@@ -5,6 +5,8 @@ export interface WordInfo {
   wordLower: string[]
   soundRu?: string[]
   soundEn?: string[]
+  wordRu?: string
+  wordEn?: string
 }
 
 interface LetterModalProps {
@@ -90,6 +92,20 @@ export default function LetterModal({ info, onClose }: LetterModalProps) {
                 </td>
               ))}
             </tr>
+            {info.wordRu && (
+              <tr>
+                <td colSpan={maxLen} className="border px-2 py-1 text-center">
+                  {info.wordRu}
+                </td>
+              </tr>
+            )}
+            {info.wordEn && (
+              <tr>
+                <td colSpan={maxLen} className="border px-2 py-1 text-center">
+                  {info.wordEn}
+                </td>
+              </tr>
+            )}
           </tbody>
         </table>
       </div>
