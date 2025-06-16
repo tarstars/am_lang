@@ -12,6 +12,7 @@ export default function NavBar() {
         <Link to="/alphabet">{t('nav_alphabet')}</Link>
         <Link to="/words">{t('nav_words')}</Link>
         <Link to="/phrases">{t('nav_phrases')}</Link>
+        <Link to="/interesting_notes">{t('nav_interesting_notes')}</Link>
       </nav>
       <select
         className="border px-2 py-1"
