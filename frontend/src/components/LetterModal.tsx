@@ -43,32 +43,24 @@ export default function LetterModal({ info, onClose }: LetterModalProps) {
               </td>
             </tr>
             <tr>
-              {info.wordUpper.map((l, i) => (
-                <td key={`u${i}`} className="border px-2 py-1 text-2xl">
-                  {l}
-                </td>
-              ))}
+              <td colSpan={maxLen} className="border px-2 py-1 text-2xl text-center">
+                {info.wordUpper.join('')}
+              </td>
             </tr>
             <tr>
-              {info.wordLower.map((l, i) => (
-                <td key={`l${i}`} className="border px-2 py-1 text-2xl">
-                  {l}
-                </td>
-              ))}
+              <td colSpan={maxLen} className="border px-2 py-1 text-2xl text-center">
+                {info.wordLower.join('')}
+              </td>
             </tr>
             <tr>
-              {info.soundRu.map((s, i) => (
-                <td key={`r${i}`} className="border px-2 py-1">
-                  {s}
-                </td>
-              ))}
+              <td colSpan={maxLen} className="border px-2 py-1 text-center">
+                {info.soundRu.join('')}
+              </td>
             </tr>
             <tr>
-              {info.soundEn.map((s, i) => (
-                <td key={`e${i}`} className="border px-2 py-1">
-                  {s}
-                </td>
-              ))}
+              <td colSpan={maxLen} className="border px-2 py-1 text-center">
+                {info.soundEn.join('')}
+              </td>
             </tr>
             <tr>
               {info.wordUpper.map((l, i) => (
