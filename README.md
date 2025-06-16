@@ -2,7 +2,7 @@
 
 This repository contains a minimal React + Flask project for experimenting with Armenian language learning tools.
 
-- Includes basic trainers for the alphabet, words and phrases with EN/RU translation switch.
+- Includes basic trainers for the alphabet, words and phrases with EN/RU translation switch, plus an "Interesting notes" section.
 ## Frontend
 - Vite + React 18 + TypeScript
 - Tailwind CSS for styling

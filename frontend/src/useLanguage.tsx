@@ -14,6 +14,7 @@ const strings: Record<Lang, Record<string, string>> = {
     nav_alphabet: 'Alphabet trainer',
     nav_words: 'Word trainer',
     nav_phrases: 'Phrase trainer',
+    nav_interesting_notes: 'Interesting notes',
     alphabet_title: 'Armenian Alphabet',
     words_title: 'Simple Words',
     phrases_title: 'Frequent Phrases',
@@ -22,7 +23,7 @@ const strings: Record<Lang, Record<string, string>> = {
     latin: 'Latin',
     russian: 'Russian phonetic',
     lowercase: 'Lowercase',
-    interesting_notes: 'Interesting notes'
+    interesting_notes_title: 'Interesting notes'
   },
   ru: {
     welcome_title: 'Добро пожаловать в тренажеры армянского языка',
@@ -30,6 +31,7 @@ const strings: Record<Lang, Record<string, string>> = {
     nav_alphabet: 'Тренажер алфавита',
     nav_words: 'Тренажер слов',
     nav_phrases: 'Тренажер фраз',
+    nav_interesting_notes: 'любопытные заметки',
     alphabet_title: 'Армянский алфавит',
     words_title: 'Простые слова',
     phrases_title: 'Частые фразы',
@@ -38,7 +40,7 @@ const strings: Record<Lang, Record<string, string>> = {
     latin: 'Латиница',
     russian: 'Русская фонетика',
     lowercase: 'строчная',
-    interesting_notes: 'любопытные заметки'
+    interesting_notes_title: 'любопытные заметки'
   },
 }
 
