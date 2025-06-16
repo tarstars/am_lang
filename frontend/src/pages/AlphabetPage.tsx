@@ -19,6 +19,13 @@ import parrotImg from '../assets/alphabet/parrot.webp'
 import pourImg from '../assets/alphabet/pour.webp'
 import raisinImg from '../assets/alphabet/raisin.webp'
 import steeringWheelImg from '../assets/alphabet/steering_wheel.webp'
+import bullImg from '../assets/alphabet/bull.webp'
+import cheeseImg from '../assets/alphabet/cheese.webp'
+import robotImg from '../assets/alphabet/robot.webp'
+import roseImg from '../assets/alphabet/rose.webp'
+import snakeImg from '../assets/alphabet/snake.webp'
+import stoneImg from '../assets/alphabet/stone.webp'
+import waterImg from '../assets/alphabet/water.webp'
 import LetterModal from '../components/LetterModal'
 import type { LetterInfo } from '../components/LetterModal'
 
@@ -155,6 +162,55 @@ const letterInfoMap: Record<string, LetterInfo> = {
     wordLower: ['ճ'],
     soundRu: ['Че'],
     soundEn: ['Ch'],
+  },
+  Պ: {
+    image: cheeseImg,
+    wordUpper: ['Պ'],
+    wordLower: ['պ'],
+    soundRu: ['Пе'],
+    soundEn: ['P'],
+  },
+  Ց: {
+    image: bullImg,
+    wordUpper: ['Ց'],
+    wordLower: ['ց'],
+    soundRu: ['Цо'],
+    soundEn: ['Tsʿ'],
+  },
+  Ջ: {
+    image: waterImg,
+    wordUpper: ['Ջ'],
+    wordLower: ['ջ'],
+    soundRu: ['Дже'],
+    soundEn: ['J'],
+  },
+  Ռ: {
+    image: robotImg,
+    wordUpper: ['Ռ'],
+    wordLower: ['ռ'],
+    soundRu: ['Ра'],
+    soundEn: ['Rr'],
+  },
+  Վ: {
+    image: roseImg,
+    wordUpper: ['Վ'],
+    wordLower: ['վ'],
+    soundRu: ['Вев'],
+    soundEn: ['V'],
+  },
+  Ք: {
+    image: stoneImg,
+    wordUpper: ['Ք'],
+    wordLower: ['ք'],
+    soundRu: ['Кʼе'],
+    soundEn: ['Kʿ'],
+  },
+  Օ: {
+    image: snakeImg,
+    wordUpper: ['Օ'],
+    wordLower: ['օ'],
+    soundRu: ['О'],
+    soundEn: ['O'],
   },
 }
 
