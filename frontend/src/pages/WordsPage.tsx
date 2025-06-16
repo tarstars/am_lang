@@ -1,7 +1,7 @@
 import { useLanguage } from '../useLanguage'
 import bullImg from '../assets/alphabet/bull.webp'
 import cheeseImg from '../assets/alphabet/cheese.webp'
-import dressImg from '../assets/alphabet/dress.webp'
+import skirtImg from '../assets/alphabet/skirt.webp'
 import lampImg from '../assets/alphabet/lamp.webp'
 import robotImg from '../assets/alphabet/robot.webp'
 import roseImg from '../assets/alphabet/rose.webp'
@@ -19,7 +19,7 @@ interface Word {
 const words: Word[] = [
   { image: bullImg, hy: 'ցուլ', en: 'bull', ru: 'бык' },
   { image: cheeseImg, hy: 'պանիր', en: 'cheese', ru: 'сыр' },
-  { image: dressImg, hy: 'զգեստ', en: 'dress', ru: 'платье' },
+  { image: skirtImg, hy: 'զգեստ', en: 'skirt', ru: 'юбка' },
   { image: lampImg, hy: 'լամպ', en: 'lamp', ru: 'лампа' },
   { image: robotImg, hy: 'ռոբոտ', en: 'robot', ru: 'робот' },
   { image: roseImg, hy: 'վարդ', en: 'rose', ru: 'роза' },
