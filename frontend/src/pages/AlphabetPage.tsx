@@ -1,6 +1,24 @@
 import { useState } from 'react'
 import { useLanguage } from '../useLanguage'
 import polarOwl from '../assets/polar_owl.webp'
+import appleImg from '../assets/alphabet/apple.webp'
+import apricotImg from '../assets/alphabet/apricot.webp'
+import bookImg from '../assets/alphabet/book.webp'
+import bugImg from '../assets/alphabet/bug.webp'
+import catImg from '../assets/alphabet/cat.webp'
+import doorImg from '../assets/alphabet/door.webp'
+import earthImg from '../assets/alphabet/earth.webp'
+import electricCurrentImg from '../assets/alphabet/electric_current.webp'
+import girafImg from '../assets/alphabet/giraf.webp'
+import houseImg from '../assets/alphabet/house.webp'
+import incubatorImg from '../assets/alphabet/incubator.webp'
+import jewelryImg from '../assets/alphabet/jewelry.webp'
+import lightImg from '../assets/alphabet/light.webp'
+import lunchImg from '../assets/alphabet/lunch.webp'
+import parrotImg from '../assets/alphabet/parrot.webp'
+import pourImg from '../assets/alphabet/pour.webp'
+import raisinImg from '../assets/alphabet/raisin.webp'
+import steeringWheelImg from '../assets/alphabet/steering_wheel.webp'
 import LetterModal from '../components/LetterModal'
 import type { LetterInfo } from '../components/LetterModal'
 
@@ -11,6 +29,132 @@ const letterInfoMap: Record<string, LetterInfo> = {
     wordLower: ['բ', 'ու'],
     soundRu: ['Б', 'У'],
     soundEn: ['b', 'oo'],
+  },
+  Ա: {
+    image: appleImg,
+    wordUpper: ['Ա'],
+    wordLower: ['ա'],
+    soundRu: ['Айб'],
+    soundEn: ['A'],
+  },
+  Գ: {
+    image: apricotImg,
+    wordUpper: ['Գ'],
+    wordLower: ['գ'],
+    soundRu: ['Гим'],
+    soundEn: ['G'],
+  },
+  Դ: {
+    image: bookImg,
+    wordUpper: ['Դ'],
+    wordLower: ['դ'],
+    soundRu: ['Да'],
+    soundEn: ['D'],
+  },
+  Ե: {
+    image: bugImg,
+    wordUpper: ['Ե'],
+    wordLower: ['ե'],
+    soundRu: ['Еч'],
+    soundEn: ['Ye'],
+  },
+  Զ: {
+    image: catImg,
+    wordUpper: ['Զ'],
+    wordLower: ['զ'],
+    soundRu: ['За'],
+    soundEn: ['Z'],
+  },
+  Է: {
+    image: doorImg,
+    wordUpper: ['Է'],
+    wordLower: ['է'],
+    soundRu: ['Э'],
+    soundEn: ['E'],
+  },
+  Ը: {
+    image: earthImg,
+    wordUpper: ['Ը'],
+    wordLower: ['ը'],
+    soundRu: ['Эт'],
+    soundEn: ['Ə'],
+  },
+  Թ: {
+    image: electricCurrentImg,
+    wordUpper: ['Թ'],
+    wordLower: ['թ'],
+    soundRu: ['Тхо'],
+    soundEn: ['Tʿ'],
+  },
+  Ժ: {
+    image: girafImg,
+    wordUpper: ['Ժ'],
+    wordLower: ['ժ'],
+    soundRu: ['Же'],
+    soundEn: ['Zh'],
+  },
+  Ի: {
+    image: houseImg,
+    wordUpper: ['Ի'],
+    wordLower: ['ի'],
+    soundRu: ['Ини'],
+    soundEn: ['I'],
+  },
+  Լ: {
+    image: incubatorImg,
+    wordUpper: ['Լ'],
+    wordLower: ['լ'],
+    soundRu: ['Լюн'],
+    soundEn: ['L'],
+  },
+  Խ: {
+    image: jewelryImg,
+    wordUpper: ['Խ'],
+    wordLower: ['խ'],
+    soundRu: ['Хе'],
+    soundEn: ['Kh'],
+  },
+  Ծ: {
+    image: lightImg,
+    wordUpper: ['Ծ'],
+    wordLower: ['ծ'],
+    soundRu: ['Цо'],
+    soundEn: ['Ts'],
+  },
+  Կ: {
+    image: lunchImg,
+    wordUpper: ['Կ'],
+    wordLower: ['կ'],
+    soundRu: ['Кен'],
+    soundEn: ['K'],
+  },
+  Հ: {
+    image: parrotImg,
+    wordUpper: ['Հ'],
+    wordLower: ['հ'],
+    soundRu: ['Хо'],
+    soundEn: ['H'],
+  },
+  Ձ: {
+    image: pourImg,
+    wordUpper: ['Ձ'],
+    wordLower: ['ձ'],
+    soundRu: ['Дза'],
+    soundEn: ['Dz'],
+  },
+  Ղ: {
+    image: raisinImg,
+    wordUpper: ['Ղ'],
+    wordLower: ['ղ'],
+    soundRu: ['Гат'],
+    soundEn: ['Gh'],
+  },
+  Ճ: {
+    image: steeringWheelImg,
+    wordUpper: ['Ճ'],
+    wordLower: ['ճ'],
+    soundRu: ['Че'],
+    soundEn: ['Ch'],
   },
 }
 
