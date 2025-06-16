@@ -3,8 +3,8 @@ export interface WordInfo {
   image: string
   wordUpper: string[]
   wordLower: string[]
-  soundRu: string[]
-  soundEn: string[]
+  soundRu?: string[]
+  soundEn?: string[]
 }
 
 interface LetterModalProps {
@@ -16,12 +16,12 @@ export default function LetterModal({ info, onClose }: LetterModalProps) {
   const maxLen = Math.max(
     info.wordUpper.length,
     info.wordLower.length,
-    info.soundRu.length,
-    info.soundEn.length,
+    info.soundRu?.length ?? 0,
+    info.soundEn?.length ?? 0,
   )
 
-  const ruCaps = info.soundRu.map((s) => s.toUpperCase())
-  const enCaps = info.soundEn.map((s) => s.toUpperCase())
+  const ruCaps = (info.soundRu ?? []).map((s) => s.toUpperCase())
+  const enCaps = (info.soundEn ?? []).map((s) => s.toUpperCase())
 
   return (
     <div
@@ -54,12 +54,12 @@ export default function LetterModal({ info, onClose }: LetterModalProps) {
             </tr>
             <tr>
               <td colSpan={maxLen} className="border px-2 py-1 text-center">
-                {info.soundRu.join('')}
+                {(info.soundRu ?? []).join('')}
               </td>
             </tr>
             <tr>
               <td colSpan={maxLen} className="border px-2 py-1 text-center">
-                {info.soundEn.join('')}
+                {(info.soundEn ?? []).join('')}
               </td>
             </tr>
             <tr>
