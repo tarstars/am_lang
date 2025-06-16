@@ -1,5 +1,5 @@
 
-export interface LetterInfo {
+export interface WordInfo {
   image: string
   wordUpper: string[]
   wordLower: string[]
@@ -8,7 +8,7 @@ export interface LetterInfo {
 }
 
 interface LetterModalProps {
-  info: LetterInfo
+  info: WordInfo
   onClose: () => void
 }
 
