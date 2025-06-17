@@ -1,7 +1,13 @@
 import polarOwl from '../assets/polar_owl.webp'
+import yesImg from '../assets/phrases/yes.webp'
+import noImg from '../assets/phrases/no.webp'
+import thankYouImg from '../assets/phrases/thank_you.webp'
+import plasticBagImg from '../assets/phrases/plastic_bag.webp'
+import needPlasticBagImg from '../assets/phrases/do_you_need_plastic_bag.webp'
 import { useLanguage } from '../useLanguage'
 
 interface Phrase {
+  image?: string
   hy: string
   enPron: string
   ruPron: string
@@ -134,21 +140,23 @@ export default function PhrasesPage() {
   return (
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4">{t('phrases_title')}</h1>
-      <div className="space-y-4">
+      <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(18rem,1fr))]">
         {phrases.map((p, i) => (
           <div
             key={i}
-            className="flex bg-white rounded shadow overflow-hidden"
+            className="bg-white rounded shadow overflow-hidden w-fit"
           >
             <img
-              src={polarOwl}
-              alt="placeholder"
-              className="w-24 h-24 object-cover flex-shrink-0"
+              src={[yesImg, noImg, thankYouImg, plasticBagImg, needPlasticBagImg][
+                i % 5
+              ] || polarOwl}
+              alt="phrase illustration"
+              className="object-cover w-full h-auto"
             />
             <div className="p-4 flex flex-col justify-center">
-              <div className="font-bold text-lg">{p.hy}</div>
-              <div>{p.enPron}</div>
-              <div>{p.ruPron}</div>
+              <div className="font-bold text-2xl mb-1">{p.hy}</div>
+              <div className="text-lg">{p.enPron}</div>
+              <div className="text-lg mb-2">{p.ruPron}</div>
               <div>{p.en}</div>
               <div>{p.ru}</div>
             </div>
