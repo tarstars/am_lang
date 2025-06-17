@@ -29,8 +29,8 @@ import waterImg from '../assets/alphabet/water.webp'
 import LetterModal from '../components/LetterModal'
 import type { WordInfo } from '../components/LetterModal'
 
-const rawWordInfoMap: Record<string, WordInfo> = {
-  Բ: {
+const rawWordInfoList: WordInfo[] = [
+  {
     image: polarOwl,
     wordUpper: ['Բ', 'ՈՒ'],
     wordLower: ['բ', 'ու'],
@@ -39,7 +39,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
     wordRu: "сова",
     wordEn: "owl",
   },
-    Ա: {
+  {
     image: appleImg,
     wordUpper: ["Խ", "Ն", "Ձ", "Ո", "Ր"],
     wordLower: ["խ", "ն", "ձ", "ո", "ր"],
@@ -48,7 +48,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "яблоко",
       wordEn: "apple",
   },
-    Գ: {
+  {
     image: apricotImg,
     wordUpper: ["Ծ", "Ի", "Ր", "Ա", "Ն"],
     wordLower: ["ծ", "ի", "ր", "ա", "ն"],
@@ -57,7 +57,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "абрикос",
       wordEn: "apricot",
   },
-    Դ: {
+  {
     image: bookImg,
     wordUpper: ["Գ", "Ի", "Ր", "Ք"],
     wordLower: ["գ", "ի", "ր", "ք"],
@@ -66,7 +66,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "книга",
       wordEn: "book",
   },
-    Ե: {
+  {
     image: bugImg,
     wordUpper: ["Բ", "Զ", "Ե", "Զ"],
     wordLower: ["բ", "զ", "ե", "զ"],
@@ -75,7 +75,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "жук",
       wordEn: "bug",
   },
-    Զ: {
+  {
     image: catImg,
     wordUpper: ["Կ", "Ա", "Տ", "ՈՒ"],
     wordLower: ["կ", "ա", "տ", "ու"],
@@ -84,7 +84,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "кот",
       wordEn: "cat",
   },
-    Է: {
+  {
     image: doorImg,
     wordUpper: ["Դ", "ՈՒ", "Ռ"],
     wordLower: ["դ", "ու", "ռ"],
@@ -93,7 +93,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "дверь",
       wordEn: "door",
   },
-    Ը: {
+  {
     image: earthImg,
     wordUpper: ["Ե", "Ր", "Կ", "Ի", "Ր"],
     wordLower: ["ե", "ր", "կ", "ի", "ր"],
@@ -102,7 +102,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "земля",
       wordEn: "earth",
   },
-    Թ: {
+  {
     image: electricCurrentImg,
     wordUpper: ["Հ", "Ո", "Ս", "Ա", "Ն", "Ք"],
     wordLower: ["հ", "ո", "ս", "ա", "ն", "ք"],
@@ -111,7 +111,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "ток",
       wordEn: "electric current",
   },
-    Ժ: {
+  {
     image: girafImg,
     wordUpper: ["Ը", "Ն", "Ձ", "ՈՒ", "Ղ", "Տ"],
     wordLower: ["ը", "ն", "ձ", "ու", "ղ", "տ"],
@@ -120,7 +120,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "жираф",
       wordEn: "giraffe",
   },
-    Ի: {
+  {
     image: houseImg,
     wordUpper: ["Տ", "ՈՒ", "Ն"],
     wordLower: ["տ", "ու", "ն"],
@@ -129,7 +129,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "дом",
       wordEn: "house",
   },
-    Լ: {
+  {
     image: incubatorImg,
     wordUpper: ["Ի", "Ն", "Կ", "ՈՒ", "Բ", "Ա", "Տ", "Ո", "Ր"],
     wordLower: ["ի", "ն", "կ", "ու", "բ", "ա", "տ", "ո", "ր"],
@@ -138,7 +138,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "инкубатор",
       wordEn: "incubator",
   },
-    Խ: {
+  {
     image: jewelryImg,
     wordUpper: ["Զ", "Ա", "Ր", "Դ"],
     wordLower: ["զ", "ա", "ր", "դ"],
@@ -147,7 +147,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "украшения",
       wordEn: "jewelry",
   },
-    Ծ: {
+  {
     image: lightImg,
     wordUpper: ["Լ", "ՈՒ", "Յ", "Ս"],
     wordLower: ["լ", "ու", "յ", "ս"],
@@ -156,7 +156,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "свет",
       wordEn: "light",
   },
-    Կ: {
+  {
     image: lunchImg,
     wordUpper: ["Ճ", "Ա", "Շ"],
     wordLower: ["ճ", "ա", "շ"],
@@ -165,7 +165,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "обед",
       wordEn: "lunch",
   },
-    Հ: {
+  {
     image: parrotImg,
     wordUpper: ["Թ", "ՈՒ", "Թ", "Ա", "Կ"],
     wordLower: ["թ", "ու", "թ", "ա", "կ"],
@@ -174,7 +174,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "попугай",
       wordEn: "parrot",
   },
-    Ձ: {
+  {
     image: pourImg,
     wordUpper: ["Լ", "Ց", "Ն", "Ե", "Լ"],
     wordLower: ["լ", "ց", "ն", "ե", "լ"],
@@ -183,7 +183,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "наливать",
       wordEn: "pour",
   },
-    Ղ: {
+  {
     image: raisinImg,
     wordUpper: ["Չ", "Ա", "Մ", "Ի", "Չ"],
     wordLower: ["չ", "ա", "մ", "ի", "չ"],
@@ -192,7 +192,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "изюм",
       wordEn: "raisin",
   },
-    Ճ: {
+  {
     image: steeringWheelImg,
     wordUpper: ["Ղ", "Ե", "Կ"],
     wordLower: ["ղ", "ե", "կ"],
@@ -201,7 +201,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "руль",
       wordEn: "steering wheel",
   },
-    Պ: {
+  {
     image: cheeseImg,
     wordUpper: ["Պ", "Ա", "Ն", "Ի", "Ր"],
     wordLower: ["պ", "ա", "ն", "ի", "ր"],
@@ -210,7 +210,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "сыр",
       wordEn: "cheese",
   },
-    Ց: {
+  {
     image: bullImg,
     wordUpper: ["Ց", "ՈՒ", "Լ"],
     wordLower: ["ց", "ու", "լ"],
@@ -219,7 +219,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "бык",
       wordEn: "bull",
   },
-    Ջ: {
+  {
     image: waterImg,
     wordUpper: ["Ջ", "ՈՒ", "Ր"],
     wordLower: ["ջ", "ու", "ր"],
@@ -228,7 +228,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "вода",
       wordEn: "water",
   },
-    Ռ: {
+  {
     image: robotImg,
     wordUpper: ["Ռ", "Ո", "Բ", "Ո", "Տ"],
     wordLower: ["ռ", "ո", "բ", "ո", "տ"],
@@ -237,7 +237,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "робот",
       wordEn: "robot",
   },
-    Վ: {
+  {
     image: roseImg,
     wordUpper: ["Վ", "Ա", "Ր", "Դ"],
     wordLower: ["վ", "ա", "ր", "դ"],
@@ -246,7 +246,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "роза",
       wordEn: "rose",
   },
-    Ք: {
+  {
     image: stoneImg,
     wordUpper: ["Ք", "Ա", "Ր"],
     wordLower: ["ք", "ա", "ր"],
@@ -255,7 +255,7 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "камень",
       wordEn: "stone",
   },
-  Օ: {
+  {
     image: snakeImg,
     wordUpper: ["Օ", "Ձ"],
     wordLower: ["օ", "ձ"],
@@ -264,9 +264,9 @@ const rawWordInfoMap: Record<string, WordInfo> = {
       wordRu: "змея",
       wordEn: "snake",
   },
-}
+]
 
-const groupedWordInfo = Object.values(rawWordInfoMap).reduce(
+const groupedWordInfo = rawWordInfoList.reduce(
   (acc, info) => {
     const initial = info.wordUpper[0]
     ;(acc[initial] ??= []).push(info)
