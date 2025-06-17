@@ -14,8 +14,12 @@ const notes: Note[] = [
     titleKey: 'note_2025_06_17_title',
     render: (t) => (
       <div className="grid md:grid-cols-2 gap-4 items-start">
-        <img src={architectImg} alt={t('note_2025_06_17_alt')} className="w-full" />
-        <div className="space-y-4">
+        <img
+          src={architectImg}
+          alt={t('note_2025_06_17_alt')}
+          className="w-full md:max-w-xs mx-auto"
+        />
+        <div className="space-y-4 text-lg">
           <p>{t('note_2025_06_17_p1')}</p>
           <p>{t('note_2025_06_17_p2')}</p>
           <p>{t('note_2025_06_17_p3')}</p>
