@@ -29,7 +29,7 @@ import waterImg from '../assets/alphabet/water.webp'
 import LetterModal from '../components/LetterModal'
 import type { WordInfo } from '../components/LetterModal'
 
-const wordInfoMap: Record<string, WordInfo> = {
+const rawWordInfoMap: Record<string, WordInfo> = {
   Բ: {
     image: polarOwl,
     wordUpper: ['Բ', 'ՈՒ'],
@@ -266,13 +266,18 @@ const wordInfoMap: Record<string, WordInfo> = {
   },
 }
 
-export const wordInfoByFirstLetter: Record<string, WordInfo[]> = Object.values(
-  wordInfoMap,
-).reduce((acc, info) => {
-  const initial = info.wordUpper[0]
-  ;(acc[initial] ??= []).push(info)
-  return acc
-}, {} as Record<string, WordInfo[]>)
+const groupedWordInfo = Object.values(rawWordInfoMap).reduce(
+  (acc, info) => {
+    const initial = info.wordUpper[0]
+    ;(acc[initial] ??= []).push(info)
+    return acc
+  },
+  {} as Record<string, WordInfo[]>,
+)
+
+export const wordInfoMap: Record<string, WordInfo[]> = Object.fromEntries(
+  Object.entries(groupedWordInfo).sort(([a], [b]) => a.localeCompare(b)),
+)
 
 const letters = [
   ['Ա', 'ա', 'A', 'Айб'],
@@ -325,8 +330,9 @@ export default function AlphabetPage() {
   const [active, setActive] = useState<WordInfo | null>(null)
 
   const openInfo = (letter: string) => {
-    const info = wordInfoMap[letter]
-    if (info) {
+    const infoList = wordInfoMap[letter]
+    if (infoList?.length) {
+      const info = infoList[0]
       const soundRu =
         info.soundRu ?? info.wordUpper.map((l) => letterSoundMap[l]?.ru ?? '')
       const soundEn =
