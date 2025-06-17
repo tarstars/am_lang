@@ -36,7 +36,7 @@ import sheepImg from '../assets/alphabet/sheep.webp'
 import skirtImg from '../assets/alphabet/skirt.webp'
 import snakeImg from '../assets/alphabet/snake.webp'
 import soccerImg from '../assets/alphabet/soccer.webp'
-import springImg from '../assets/alphabet/spring.webp'
+import autumnImg from '../assets/alphabet/autumn.webp'
 import steeringWheelImg from '../assets/alphabet/steering_wheel.webp'
 import stoneImg from '../assets/alphabet/stone.webp'
 import tableImg from '../assets/alphabet/table.webp'
@@ -90,7 +90,7 @@ const words: Word[] = [
   { image: rustImg, hy: 'ժանգ', en: 'rust', ru: 'ржавчина' },
   { image: sheepImg, hy: 'ոչխար', en: 'sheep', ru: 'овца' },
   { image: soccerImg, hy: 'ֆուտբոլ', en: 'soccer', ru: 'футбол' },
-  { image: springImg, hy: 'գարուն', en: 'spring', ru: 'весна' },
+  { image: autumnImg, hy: "աշուն", en: "autumn", ru: "осень" },
   { image: tableImg, hy: 'սեղան', en: 'table', ru: 'стол' },
 ]
 
