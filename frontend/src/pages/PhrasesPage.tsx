@@ -1,7 +1,7 @@
 import polarOwl from '../assets/polar_owl.webp'
 import yesImg from '../assets/phrases/yes.webp'
 import noImg from '../assets/phrases/no.webp'
-import thankYouImg from '../assets/phrases/thank_you.webp'
+import thankYouImg from '../assets/phrases/thank_you_hands_pressed.webp'
 import plasticBagImg from '../assets/phrases/plastic_bag.webp'
 import needPlasticBagImg from '../assets/phrases/do_you_need_plastic_bag.webp'
 import { useLanguage } from '../useLanguage'
