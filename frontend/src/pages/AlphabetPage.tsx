@@ -26,6 +26,7 @@ import roseImg from '../assets/alphabet/rose.webp'
 import snakeImg from '../assets/alphabet/snake.webp'
 import stoneImg from '../assets/alphabet/stone.webp'
 import waterImg from '../assets/alphabet/water.webp'
+import donkeyImg from '../assets/alphabet/donkey.webp'
 import butterImg from '../assets/alphabet/butter.webp'
 import dogImg from '../assets/alphabet/dog.webp'
 import europeImg from '../assets/alphabet/europe.webp'
@@ -40,6 +41,8 @@ import rustImg from '../assets/alphabet/rust.webp'
 import sheepImg from '../assets/alphabet/sheep.webp'
 import soccerImg from '../assets/alphabet/soccer.webp'
 import autumnImg from '../assets/alphabet/autumn.webp'
+import yogurtImg from '../assets/alphabet/yogurt.webp'
+import sunImg from '../assets/alphabet/sun.webp'
 import tableImg from '../assets/alphabet/table.webp'
 import LetterModal from '../components/LetterModal'
 import type { WordInfo } from '../components/LetterModal'
@@ -244,6 +247,15 @@ const rawWordInfoList: WordInfo[] = [
       wordEn: "water",
   },
   {
+    image: donkeyImg,
+    wordUpper: ["Է", "Շ"],
+    wordLower: ["է", "շ"],
+    soundRu: ["э", "ш"],
+    soundEn: ["e", "sh"],
+    wordRu: "осел",
+    wordEn: "donkey",
+  },
+  {
     image: robotImg,
     wordUpper: ["Ռ", "Ո", "Բ", "Ո", "Տ"],
     wordLower: ["ռ", "ո", "բ", "ո", "տ"],
@@ -406,6 +418,24 @@ const rawWordInfoList: WordInfo[] = [
     wordEn: "autumn",
   },
   {
+    image: sunImg,
+    wordUpper: ["Ա", "Ր", "ԵՎ"],
+    wordLower: ["ա", "ր", "և"],
+    soundRu: ["а", "р", "ев"],
+    soundEn: ["a", "r", "ev"],
+    wordRu: "солнце",
+    wordEn: "sun",
+  },
+  {
+    image: yogurtImg,
+    wordUpper: ["Յ", "Ո", "Գ", "ՈՒ", "Ր", "Տ"],
+    wordLower: ["յ", "ո", "գ", "ու", "ր", "տ"],
+    soundRu: ["й", "о", "г", "у", "р", "т"],
+    soundEn: ["y", "o", "g", "u", "r", "t"],
+    wordRu: "йогурт",
+    wordEn: "yogurt",
+  },
+  {
     image: tableImg,
     wordUpper: ["Ս", "Ե", "Ղ", "Ա", "Ն"],
     wordLower: ["ս", "ե", "ղ", "ա", "ն"],
@@ -418,7 +448,7 @@ const rawWordInfoList: WordInfo[] = [
 
 const groupedWordInfo = rawWordInfoList.reduce(
   (acc, info) => {
-    const initial = info.wordUpper[0]
+    const initial = info.wordEn === 'sun' ? 'Ր' : info.wordUpper[0]
     ;(acc[initial] ??= []).push(info)
     return acc
   },

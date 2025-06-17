@@ -36,11 +36,13 @@ import sheepImg from '../assets/alphabet/sheep.webp'
 import skirtImg from '../assets/alphabet/skirt.webp'
 import snakeImg from '../assets/alphabet/snake.webp'
 import soccerImg from '../assets/alphabet/soccer.webp'
-import springImg from '../assets/alphabet/spring.webp'
+import autumnImg from '../assets/alphabet/autumn.webp'
 import steeringWheelImg from '../assets/alphabet/steering_wheel.webp'
 import stoneImg from '../assets/alphabet/stone.webp'
 import tableImg from '../assets/alphabet/table.webp'
 import waterImg from '../assets/alphabet/water.webp'
+import donkeyImg from '../assets/alphabet/donkey.webp'
+import yogurtImg from '../assets/alphabet/yogurt.webp'
 
 interface Word {
   image: string
@@ -78,6 +80,7 @@ const words: Word[] = [
   { image: stoneImg, hy: 'քար', en: 'stone', ru: 'камень' },
   { image: waterImg, hy: 'ջուր', en: 'water', ru: 'вода' },
   { image: butterImg, hy: 'կարագ', en: 'butter', ru: 'масло' },
+  { image: donkeyImg, hy: 'էշ', en: 'donkey', ru: 'осёл' },
   { image: dogImg, hy: 'շուն', en: 'dog', ru: 'собака' },
   { image: europeImg, hy: 'Եվրոպա', en: 'Europe', ru: 'Европа' },
   { image: fishImg, hy: 'ձուկ', en: 'fish', ru: 'рыба' },
@@ -90,7 +93,8 @@ const words: Word[] = [
   { image: rustImg, hy: 'ժանգ', en: 'rust', ru: 'ржавчина' },
   { image: sheepImg, hy: 'ոչխար', en: 'sheep', ru: 'овца' },
   { image: soccerImg, hy: 'ֆուտբոլ', en: 'soccer', ru: 'футбол' },
-  { image: springImg, hy: 'գարուն', en: 'spring', ru: 'весна' },
+  { image: autumnImg, hy: 'աշուն', en: 'autumn', ru: 'осень' },
+  { image: yogurtImg, hy: 'յոգուրտ', en: 'yogurt', ru: 'йогурт' },
   { image: tableImg, hy: 'սեղան', en: 'table', ru: 'стол' },
 ]
 
