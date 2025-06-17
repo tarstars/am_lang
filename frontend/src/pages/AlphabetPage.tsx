@@ -39,7 +39,7 @@ import roadImg from '../assets/alphabet/road.webp'
 import rustImg from '../assets/alphabet/rust.webp'
 import sheepImg from '../assets/alphabet/sheep.webp'
 import soccerImg from '../assets/alphabet/soccer.webp'
-import springImg from '../assets/alphabet/spring.webp'
+import autumnImg from '../assets/alphabet/autumn.webp'
 import tableImg from '../assets/alphabet/table.webp'
 import LetterModal from '../components/LetterModal'
 import type { WordInfo } from '../components/LetterModal'
@@ -397,13 +397,13 @@ const rawWordInfoList: WordInfo[] = [
       wordEn: "soccer",
   },
   {
-    image: springImg,
-    wordUpper: ["Գ", "Ա", "Ր", "ՈՒ", "Ն"],
-    wordLower: ["գ", "ա", "ր", "ու", "ն"],
-      soundRu: ["г", "а", "р", "у", "н"],
-      soundEn: ["g", "a", "r", "u", "n"],
-      wordRu: "весна",
-      wordEn: "spring",
+    image: autumnImg,
+    wordUpper: ["Ա", "Շ", "ՈՒ", "Ն"],
+    wordLower: ["ա", "շ", "ու", "ն"],
+    soundRu: ["а", "ш", "у", "н"],
+    soundEn: ["a", "sh", "u", "n"],
+    wordRu: "осень",
+    wordEn: "autumn",
   },
   {
     image: tableImg,
