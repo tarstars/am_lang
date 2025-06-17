@@ -1,11 +1,160 @@
+import polarOwl from '../assets/polar_owl.webp'
 import { useLanguage } from '../useLanguage'
+
+interface Phrase {
+  hy: string
+  enPron: string
+  ruPron: string
+  en: string
+  ru: string
+}
+
+const phrases: Phrase[] = [
+  { hy: 'Այո', enPron: 'Ayo', ruPron: 'Аё', en: 'Yes', ru: 'Да' },
+  { hy: 'Ոչ', enPron: 'Voch', ruPron: 'Воч', en: 'No', ru: 'Нет' },
+  {
+    hy: 'Շնորհակալություն',
+    enPron: 'Shnorhakalutyun',
+    ruPron: 'Шнорhакалутюн',
+    en: 'Thank you',
+    ru: 'Спасибо',
+  },
+  {
+    hy: 'Խնդրեմ',
+    enPron: 'Khndrem',
+    ruPron: 'Хндрем',
+    en: "You're welcome / Please",
+    ru: 'Пожалуйста',
+  },
+  { hy: 'Բարեւ', enPron: 'Barev', ruPron: 'Барев', en: 'Hello', ru: 'Привет' },
+  {
+    hy: 'Ցտեսություն',
+    enPron: 'Tstesutyun',
+    ruPron: 'Цтесуцюн',
+    en: 'Goodbye',
+    ru: 'До свидания',
+  },
+  {
+    hy: 'Որտեղ է զուգարանը',
+    enPron: 'Vortegh e zugarany',
+    ruPron: 'Вортех э зугараны',
+    en: 'Where is the toilet?',
+    ru: 'Где туалет?',
+  },
+  {
+    hy: 'Ես ուզում եմ սա',
+    enPron: 'Yes uzum em sa',
+    ruPron: 'Йес узум эм са',
+    en: 'I want this',
+    ru: 'Я хочу это',
+  },
+  {
+    hy: 'Չեմ հասկանում',
+    enPron: 'Chem haskanum',
+    ruPron: 'Чем hасканум',
+    en: 'I don’t understand',
+    ru: 'Я не понимаю',
+  },
+  {
+    hy: 'Այդքան էլ լավ չէ',
+    enPron: "Aydk’an el lav ch’e",
+    ruPron: 'Айткан эл лав чэ',
+    en: 'Not so good',
+    ru: 'Не очень хорошо',
+  },
+  { hy: 'Լավ է', enPron: 'Lav e', ruPron: 'Лав э', en: 'It’s good', ru: 'Хорошо' },
+  {
+    hy: 'Որքա՞ն արժի',
+    enPron: "Vork’an arji?",
+    ruPron: 'Ворк’ан аржи?',
+    en: 'How much is it?',
+    ru: 'Сколько это стоит?',
+  },
+  {
+    hy: 'Որտե՞ղ է մետրոն',
+    enPron: 'Vortegh e metron?',
+    ruPron: 'Вортех э метрон?',
+    en: 'Where is the metro?',
+    ru: 'Где метро?',
+  },
+  {
+    hy: 'Տոպրակ է պետք?',
+    enPron: "Toprak e petk'?",
+    ruPron: "Топрак э петк'?",
+    en: 'Do you need a plastic bag?',
+    ru: 'Нужен пакет?',
+  },
+  {
+    hy: 'Ես հայ չեմ',
+    enPron: 'Yes hay chem',
+    ruPron: 'Йес хай чем',
+    en: 'I am not Armenian',
+    ru: 'Я не армянин',
+  },
+  {
+    hy: 'Խաղաղություն',
+    enPron: 'Khaghaghutyun',
+    ruPron: 'Хаhаhуцюн',
+    en: 'Peace',
+    ru: 'Мир',
+  },
+  {
+    hy: 'Հաճելի օր',
+    enPron: 'Hacheli or',
+    ruPron: 'Хачели ор',
+    en: 'Have a nice day',
+    ru: 'Хорошего дня',
+  },
+  {
+    hy: 'Բարի գիշեր',
+    enPron: 'Bari gisher',
+    ruPron: 'Бари гишер',
+    en: 'Good night',
+    ru: 'Спокойной ночи',
+  },
+  {
+    hy: 'Ի՞նչ է դա',
+    enPron: 'Inch e da?',
+    ruPron: 'Инч э да?',
+    en: 'What is that?',
+    ru: 'Что это?',
+  },
+  {
+    hy: 'Իմ անունն է ...',
+    enPron: 'Im anunn e ...',
+    ruPron: 'Им анунн э ...',
+    en: 'My name is ...',
+    ru: 'Меня зовут ...',
+  },
+]
 
 export default function PhrasesPage() {
   const { t } = useLanguage()
+
   return (
     <div className="p-4">
-      <h1 className="text-xl font-bold">{t('phrases_title')}</h1>
-      <p>{t('coming_soon')}</p>
+      <h1 className="text-xl font-bold mb-4">{t('phrases_title')}</h1>
+      <div className="space-y-4">
+        {phrases.map((p, i) => (
+          <div
+            key={i}
+            className="flex bg-white rounded shadow overflow-hidden"
+          >
+            <img
+              src={polarOwl}
+              alt="placeholder"
+              className="w-24 h-24 object-cover flex-shrink-0"
+            />
+            <div className="p-4 flex flex-col justify-center">
+              <div className="font-bold text-lg">{p.hy}</div>
+              <div>{p.enPron}</div>
+              <div>{p.ruPron}</div>
+              <div>{p.en}</div>
+              <div>{p.ru}</div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
