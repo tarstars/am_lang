@@ -26,6 +26,21 @@ import roseImg from '../assets/alphabet/rose.webp'
 import snakeImg from '../assets/alphabet/snake.webp'
 import stoneImg from '../assets/alphabet/stone.webp'
 import waterImg from '../assets/alphabet/water.webp'
+import butterImg from '../assets/alphabet/butter.webp'
+import dogImg from '../assets/alphabet/dog.webp'
+import europeImg from '../assets/alphabet/europe.webp'
+import fishImg from '../assets/alphabet/fish.webp'
+import halloImg from '../assets/alphabet/hallo.webp'
+import hareImg from '../assets/alphabet/hare.webp'
+import moneyImg from '../assets/alphabet/money.webp'
+import motherImg from '../assets/alphabet/mother.webp'
+import radioImg from '../assets/alphabet/radio.webp'
+import roadImg from '../assets/alphabet/road.webp'
+import rustImg from '../assets/alphabet/rust.webp'
+import sheepImg from '../assets/alphabet/sheep.webp'
+import soccerImg from '../assets/alphabet/soccer.webp'
+import springImg from '../assets/alphabet/spring.webp'
+import tableImg from '../assets/alphabet/table.webp'
 import LetterModal from '../components/LetterModal'
 import type { WordInfo } from '../components/LetterModal'
 
@@ -263,6 +278,141 @@ const rawWordInfoList: WordInfo[] = [
       soundEn: ["o", "dz"],
       wordRu: "змея",
       wordEn: "snake",
+  },
+  {
+    image: butterImg,
+    wordUpper: ["Կ", "Ա", "Ր", "Ա", "Գ"],
+    wordLower: ["կ", "ա", "ր", "ա", "գ"],
+      soundRu: ["к", "а", "р", "а", "г"],
+      soundEn: ["k", "a", "r", "a", "g"],
+      wordRu: "масло",
+      wordEn: "butter",
+  },
+  {
+    image: dogImg,
+    wordUpper: ["Շ", "ՈՒ", "Ն"],
+    wordLower: ["շ", "ու", "ն"],
+      soundRu: ["ш", "у", "н"],
+      soundEn: ["sh", "u", "n"],
+      wordRu: "собака",
+      wordEn: "dog",
+  },
+  {
+    image: europeImg,
+    wordUpper: ["ԵՎ", "Ր", "Ո", "Պ", "Ա"],
+    wordLower: ["և", "ր", "ո", "պ", "ա"],
+      soundRu: ["ев", "р", "о", "п", "а"],
+      soundEn: ["yev", "r", "o", "p", "a"],
+      wordRu: "Европа",
+      wordEn: "Europe",
+  },
+  {
+    image: fishImg,
+    wordUpper: ["Ձ", "ՈՒ", "Կ"],
+    wordLower: ["ձ", "ու", "կ"],
+      soundRu: ["дз", "у", "к"],
+      soundEn: ["dz", "u", "k"],
+      wordRu: "рыба",
+      wordEn: "fish",
+  },
+  {
+    image: halloImg,
+    wordUpper: ["Բ", "Ա", "Ր", "ԵՎ"],
+    wordLower: ["բ", "ա", "ր", "և"],
+      soundRu: ["б", "а", "р", "ев"],
+      soundEn: ["b", "a", "r", "yev"],
+      wordRu: "привет",
+      wordEn: "hello",
+  },
+  {
+    image: hareImg,
+    wordUpper: ["Ն", "Ա", "Պ", "Ա", "Ս", "Տ", "Ա", "Կ"],
+    wordLower: ["ն", "ա", "պ", "ա", "ս", "տ", "ա", "կ"],
+      soundRu: ["н", "а", "п", "а", "с", "т", "а", "к"],
+      soundEn: ["n", "a", "p", "a", "s", "t", "a", "k"],
+      wordRu: "заяц",
+      wordEn: "hare",
+  },
+  {
+    image: moneyImg,
+    wordUpper: ["Փ", "Ո", "Ղ"],
+    wordLower: ["փ", "ո", "ղ"],
+      soundRu: ["п", "о", "г"],
+      soundEn: ["p'", "o", "gh"],
+      wordRu: "деньги",
+      wordEn: "money",
+  },
+  {
+    image: motherImg,
+    wordUpper: ["Մ", "Ա", "Յ", "Ր", "Ի", "Կ"],
+    wordLower: ["մ", "ա", "յ", "ր", "ի", "կ"],
+      soundRu: ["м", "а", "й", "р", "и", "к"],
+      soundEn: ["m", "a", "y", "r", "i", "k"],
+      wordRu: "мать",
+      wordEn: "mother",
+  },
+  {
+    image: radioImg,
+    wordUpper: ["Ռ", "Ա", "Դ", "Ի", "Ո"],
+    wordLower: ["ռ", "ա", "դ", "ի", "ո"],
+      soundRu: ["р", "а", "д", "и", "о"],
+      soundEn: ["rr", "a", "d", "i", "o"],
+      wordRu: "радио",
+      wordEn: "radio",
+  },
+  {
+    image: roadImg,
+    wordUpper: ["Ճ", "Ա", "Ն", "Ա", "Պ", "Ա", "Ր", "Հ"],
+    wordLower: ["ճ", "ա", "ն", "ա", "պ", "ա", "ր", "հ"],
+      soundRu: ["ч", "а", "н", "а", "п", "а", "р", "х"],
+      soundEn: ["ch", "a", "n", "a", "p", "a", "r", "h"],
+      wordRu: "дорога",
+      wordEn: "road",
+  },
+  {
+    image: rustImg,
+    wordUpper: ["Ժ", "Ա", "Ն", "Գ"],
+    wordLower: ["ժ", "ա", "ն", "գ"],
+      soundRu: ["ж", "а", "н", "г"],
+      soundEn: ["zh", "a", "n", "g"],
+      wordRu: "ржавчина",
+      wordEn: "rust",
+  },
+  {
+    image: sheepImg,
+    wordUpper: ["Ո", "Չ", "Խ", "Ա", "Ր"],
+    wordLower: ["ո", "չ", "խ", "ա", "ր"],
+      soundRu: ["о", "ч", "х", "а", "р"],
+      soundEn: ["o", "ch'", "kh", "a", "r"],
+      wordRu: "овца",
+      wordEn: "sheep",
+  },
+  {
+    image: soccerImg,
+    wordUpper: ["Ֆ", "ՈՒ", "Տ", "Բ", "Ո", "Լ"],
+    wordLower: ["ֆ", "ու", "տ", "բ", "ո", "լ"],
+      soundRu: ["ф", "у", "т", "б", "о", "л"],
+      soundEn: ["f", "u", "t", "b", "o", "l"],
+      wordRu: "футбол",
+      wordEn: "soccer",
+  },
+  {
+    image: springImg,
+    wordUpper: ["Գ", "Ա", "Ր", "ՈՒ", "Ն"],
+    wordLower: ["գ", "ա", "ր", "ու", "ն"],
+      soundRu: ["г", "а", "р", "у", "н"],
+      soundEn: ["g", "a", "r", "u", "n"],
+      wordRu: "весна",
+      wordEn: "spring",
+  },
+  {
+    image: tableImg,
+    wordUpper: ["Ս", "Ե", "Ղ", "Ա", "Ն"],
+    wordLower: ["ս", "ե", "ղ", "ա", "ն"],
+      soundRu: ["с", "е", "г", "а", "н"],
+      soundEn: ["s", "e", "gh", "a", "n"],
+      wordRu: "стол",
+      wordEn: "table",
   },
 ]
 
