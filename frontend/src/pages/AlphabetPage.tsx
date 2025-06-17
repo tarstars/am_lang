@@ -354,8 +354,10 @@ export default function AlphabetPage() {
           </tr>
         </thead>
         <tbody>
-          {letters.map(([armUpper, armLower, en, ru]) => (
-            <tr key={armUpper}>
+          {letters.map(([armUpper, armLower, en, ru]) => {
+            const isMissing = !wordInfoMap[armUpper]
+            return (
+            <tr key={armUpper} className={isMissing ? 'bg-orange-100' : ''}>
               <td
                 className="border px-2 text-center text-2xl cursor-pointer hover:bg-sky-100"
                 onClick={() => openInfo(armUpper)}
@@ -366,7 +368,8 @@ export default function AlphabetPage() {
               <td className="border px-2">{en}</td>
               <td className="border px-2">{ru}</td>
             </tr>
-          ))}
+            )
+          })}
         </tbody>
       </table>
       {active && (
