@@ -4,27 +4,42 @@ import apricotImg from '../assets/alphabet/apricot.webp'
 import bookImg from '../assets/alphabet/book.webp'
 import bugImg from '../assets/alphabet/bug.webp'
 import bullImg from '../assets/alphabet/bull.webp'
+import butterImg from '../assets/alphabet/butter.webp'
 import catImg from '../assets/alphabet/cat.webp'
 import cheeseImg from '../assets/alphabet/cheese.webp'
+import dogImg from '../assets/alphabet/dog.webp'
 import doorImg from '../assets/alphabet/door.webp'
 import earthImg from '../assets/alphabet/earth.webp'
 import electricCurrentImg from '../assets/alphabet/electric_current.webp'
+import europeImg from '../assets/alphabet/europe.webp'
+import fishImg from '../assets/alphabet/fish.webp'
 import girafImg from '../assets/alphabet/giraf.webp'
+import halloImg from '../assets/alphabet/hallo.webp'
+import hareImg from '../assets/alphabet/hare.webp'
 import houseImg from '../assets/alphabet/house.webp'
 import incubatorImg from '../assets/alphabet/incubator.webp'
 import jewelryImg from '../assets/alphabet/jewelry.webp'
 import lampImg from '../assets/alphabet/lamp.webp'
 import lightImg from '../assets/alphabet/light.webp'
 import lunchImg from '../assets/alphabet/lunch.webp'
+import moneyImg from '../assets/alphabet/money.webp'
+import motherImg from '../assets/alphabet/mother.webp'
 import parrotImg from '../assets/alphabet/parrot.webp'
 import pourImg from '../assets/alphabet/pour.webp'
+import radioImg from '../assets/alphabet/radio.webp'
 import raisinImg from '../assets/alphabet/raisin.webp'
+import roadImg from '../assets/alphabet/road.webp'
 import robotImg from '../assets/alphabet/robot.webp'
 import roseImg from '../assets/alphabet/rose.webp'
+import rustImg from '../assets/alphabet/rust.webp'
+import sheepImg from '../assets/alphabet/sheep.webp'
 import skirtImg from '../assets/alphabet/skirt.webp'
 import snakeImg from '../assets/alphabet/snake.webp'
+import soccerImg from '../assets/alphabet/soccer.webp'
+import springImg from '../assets/alphabet/spring.webp'
 import steeringWheelImg from '../assets/alphabet/steering_wheel.webp'
 import stoneImg from '../assets/alphabet/stone.webp'
+import tableImg from '../assets/alphabet/table.webp'
 import waterImg from '../assets/alphabet/water.webp'
 
 interface Word {
@@ -62,6 +77,21 @@ const words: Word[] = [
   { image: snakeImg, hy: 'օձ', en: 'snake', ru: 'змея' },
   { image: stoneImg, hy: 'քար', en: 'stone', ru: 'камень' },
   { image: waterImg, hy: 'ջուր', en: 'water', ru: 'вода' },
+  { image: butterImg, hy: 'կարագ', en: 'butter', ru: 'масло' },
+  { image: dogImg, hy: 'շուն', en: 'dog', ru: 'собака' },
+  { image: europeImg, hy: 'Եվրոպա', en: 'Europe', ru: 'Европа' },
+  { image: fishImg, hy: 'ձուկ', en: 'fish', ru: 'рыба' },
+  { image: halloImg, hy: 'բարև', en: 'hello', ru: 'привет' },
+  { image: hareImg, hy: 'նապաստակ', en: 'hare', ru: 'заяц' },
+  { image: moneyImg, hy: 'փող', en: 'money', ru: 'деньги' },
+  { image: motherImg, hy: 'մայրիկ', en: 'mother', ru: 'мать' },
+  { image: radioImg, hy: 'ռադիո', en: 'radio', ru: 'радио' },
+  { image: roadImg, hy: 'ճանապարհ', en: 'road', ru: 'дорога' },
+  { image: rustImg, hy: 'ժանգ', en: 'rust', ru: 'ржавчина' },
+  { image: sheepImg, hy: 'ոչխար', en: 'sheep', ru: 'овца' },
+  { image: soccerImg, hy: 'ֆուտբոլ', en: 'soccer', ru: 'футбол' },
+  { image: springImg, hy: 'գարուն', en: 'spring', ru: 'весна' },
+  { image: tableImg, hy: 'սեղան', en: 'table', ru: 'стол' },
 ]
 
 export default function WordsPage() {
