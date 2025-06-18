@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import usePageViews from './usePageViews'
 import WelcomePage from './pages/WelcomePage'
 import AlphabetPage from './pages/AlphabetPage'
 import WordsPage from './pages/WordsPage'
@@ -12,6 +13,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
+        <TrackPageViews />
         <div className="flex min-h-screen">
           <SideNav />
           <div className="flex-1 ml-64">
@@ -27,4 +29,9 @@ export default function App() {
       </BrowserRouter>
     </LanguageProvider>
   )
+}
+
+function TrackPageViews() {
+  usePageViews()
+  return null
 }
