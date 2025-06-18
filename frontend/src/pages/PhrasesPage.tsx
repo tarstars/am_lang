@@ -4,7 +4,29 @@ import noImg from '../assets/phrases/no.webp'
 import thankYouImg from '../assets/phrases/thank_you_hands_pressed.webp'
 import plasticBagImg from '../assets/phrases/plastic_bag.webp'
 import needPlasticBagImg from '../assets/phrases/do_you_need_plastic_bag.webp'
+import goodbyeImg from '../assets/phrases/goodby.webp'
+import helloImg from '../assets/phrases/hello.webp'
+import dontUnderstandImg from '../assets/phrases/i_dont_understand.webp'
+import lightImg from '../assets/phrases/light.webp'
+import thankYouShopImg from '../assets/phrases/thank_you_in_the_shop.webp'
+import toDrinkImg from '../assets/phrases/to_drink.webp'
+import whatIsThatImg from '../assets/phrases/what_is_that.webp'
 import { useLanguage } from '../useLanguage'
+
+const phraseImages = [
+  yesImg,
+  noImg,
+  thankYouImg,
+  plasticBagImg,
+  needPlasticBagImg,
+  goodbyeImg,
+  helloImg,
+  dontUnderstandImg,
+  lightImg,
+  thankYouShopImg,
+  toDrinkImg,
+  whatIsThatImg,
+]
 
 interface Phrase {
   image?: string
@@ -147,9 +169,7 @@ export default function PhrasesPage() {
             className="bg-white rounded shadow overflow-hidden w-fit"
           >
             <img
-              src={[yesImg, noImg, thankYouImg, plasticBagImg, needPlasticBagImg][
-                i % 5
-              ] || polarOwl}
+              src={phraseImages[i % phraseImages.length] || polarOwl}
               alt="phrase illustration"
               className="object-cover w-full h-auto"
             />
