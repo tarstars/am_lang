@@ -1,5 +1,6 @@
 import { useLanguage } from '../useLanguage'
 import architectImg from '../assets/architect.webp'
+import lurikImg from '../assets/stories/lurik_00.png'
 import type { ReactNode } from 'react'
 
 interface Note {
@@ -23,6 +24,24 @@ const notes: Note[] = [
           <p>{t('note_2025_06_17_p1')}</p>
           <p>{t('note_2025_06_17_p2')}</p>
           <p>{t('note_2025_06_17_p3')}</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    dateKey: 'note_2025_06_19_date',
+    titleKey: 'note_2025_06_19_title',
+    render: (t) => (
+      <div className="grid md:grid-cols-2 gap-4 items-start">
+        <img
+          src={lurikImg}
+          alt={t('note_2025_06_19_alt')}
+          className="w-full md:max-w-xs mx-auto"
+        />
+        <div className="space-y-4 text-lg">
+          <p>{t('note_2025_06_19_p1')}</p>
+          <p>{t('note_2025_06_19_p2')}</p>
+          <p>{t('note_2025_06_19_p3')}</p>
         </div>
       </div>
     ),
