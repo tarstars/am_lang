@@ -34,7 +34,16 @@ const strings: Record<Lang, Record<string, string>> = {
     note_2025_06_17_p2:
       'During the day, winds from the Ararat Valley dominate. But in the evening, a fresh and clean mountain breeze sweeps down in the opposite direction. Tamanian designed Yerevan\u2019s streets like a one-way aerodynamic valve: heat and dust gradually permeate the city during the day, but are quickly flushed out in the evening.',
     note_2025_06_17_p3:
-      'Now, let\u2019s take a closer look at the inscription on the monument. The letters spell "\u0543\u0531\u0550\u053F\u0531\u0550\u053A\u0535\u054F". A rough transliteration would be \u201cts-ar-t-ar-ar-pet.\u201d But be careful: the initial \u201cts\u201d sound is unique to the Armenian language and can be very difficult to pronounce correctly. If you want to master it, it\u2019s best to hear it from an Armenian friend\u2014or even take a few lessons.'
+      'Now, let\u2019s take a closer look at the inscription on the monument. The letters spell "\u0543\u0531\u0550\u053F\u0531\u0550\u053A\u0535\u054F". A rough transliteration would be \u201cts-ar-t-ar-ar-pet.\u201d But be careful: the initial \u201cts\u201d sound is unique to the Armenian language and can be very difficult to pronounce correctly. If you want to master it, it\u2019s best to hear it from an Armenian friend\u2014or even take a few lessons.',
+    note_2025_06_19_date: '19 Jun 2025',
+    note_2025_06_19_title: 'The pharmacy owl',
+    note_2025_06_19_alt: 'Lurik the pharmacy owl',
+    note_2025_06_19_p1:
+      'Hello everyone! Today we examine a very common word we see on city streets: the Armenian for "pharmacy"\u2014\u0534\u0535\u0542\u0531\u054F\u0548\u0556 (degh-a-tun). It combines \u0564\u0565\u0572 meaning "medicine" and \u057F\u0578\u0582\u0576 meaning "house," literally "house of medicine."',
+    note_2025_06_19_p2:
+      'Once while walking through Arabkir near Druzhba station, we stopped by a pharmacy and, to our surprise, saw an owl in the middle of the room. Motionless, it mechanically turned its head at regular intervals. We thought nothing of it and went home.',
+    note_2025_06_19_p3:
+      'A year later we learned the owl was alive. The pharmacy owner, Artur, had rescued her after a car accident. She lost a wing and now lives in the pharmacy. Her name is Lurik, and she is a small landmark of Komitas Street. The shop itself feels like a magic box with hidden doors\u2014but that is another story.'
   },
   ru: {
     welcome_title: 'Добро пожаловать в тренажеры армянского языка',
@@ -62,7 +71,16 @@ const strings: Record<Lang, Record<string, string>> = {
     note_2025_06_17_p2:
       'Днем преобладают ветры из Араратской долины. Но вечером с гор спускается свежий ветерок в обратном направлении. Таманян спроектировал улицы Еревана как односторонний аэродинамический клапан: жара и пыль постепенно наполняют город днем, но быстро выветриваются вечером.',
     note_2025_06_17_p3:
-      'Теперь давайте приглядимся к надписи на памятнике. Буквы складываются в слово «ՃԱՐՏԱՐԱՊԵՏ». Приблизительная транслитерация — «ц-ар-т-ар-ар-пет». Но будьте осторожны: начальный звук «ц» уникален для армянского языка и его трудно произнести правильно. Если хотите освоить его, лучше услышать от армянского друга или даже взять пару уроков.'
+      'Теперь давайте приглядимся к надписи на памятнике. Буквы складываются в слово «ՃԱՐՏԱՐԱՊԵՏ». Приблизительная транслитерация — «ц-ар-т-ар-ар-пет». Но будьте осторожны: начальный звук «ц» уникален для армянского языка и его трудно произнести правильно. Если хотите освоить его, лучше услышать от армянского друга или даже взять пару уроков.',
+    note_2025_06_19_date: '19 июня 2025',
+    note_2025_06_19_title: 'Сова в аптеке',
+    note_2025_06_19_alt: 'совушка Лурик в аптеке',
+    note_2025_06_19_p1:
+      'Всем барев! Сегодня речь пойдёт об очень распространённом слове, которое мы встречаем каждый день — «аптека» по-армянски «ԴԵՂԱՏՈՒՆ» (дех-а-тун). Это составное слово: դեղ — лекарство, տուն — дом, то есть «дом лекарства».',
+    note_2025_06_19_p2:
+      'Однажды, гуляя по району Арабкир недалеко от метро Дружба, мы зашли в аптеку и увидели посередине помещения сову — или чучело совы. Она сидела неподвижно и механически поворачивала голову. Мы пожали плечами и ушли.',
+    note_2025_06_19_p3:
+      'Через год мы узнали, что сова всё-таки живая. Машина сбила её, и хозяин аптеки Артур выходил её, хотя она потеряла крыло. Теперь Лурик — так зовут совушку — живёт в аптеке и стала достопримечательностью улицы Комитаса. Сама аптека похожа на волшебную шкатулку с тайными дверцами, но это уже другая история.'
   },
 }
 
