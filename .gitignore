@@ -32,3 +32,5 @@ logs/
 coverage/
 .firebase
 api/google-cloud-sdk
+
+tmp/
