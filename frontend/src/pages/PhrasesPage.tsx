@@ -11,6 +11,7 @@ import lightImg from '../assets/phrases/light.webp'
 import thankYouShopImg from '../assets/phrases/thank_you_in_the_shop.webp'
 import toDrinkImg from '../assets/phrases/to_drink.webp'
 import whatIsThatImg from '../assets/phrases/what_is_that.webp'
+import whereIsTheToilet from '../assets/phrases/where_is_the_toilet.webp'
 import { useLanguage } from '../useLanguage'
 
 const phraseImages = [
@@ -20,6 +21,7 @@ const phraseImages = [
   plasticBagImg,
   needPlasticBagImg,
   goodbyeImg,
+  whereIsTheToilet,
   helloImg,
   dontUnderstandImg,
   lightImg,
