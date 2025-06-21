@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import polarOwl from '../assets/polar_owl.webp'
 import yesImg from '../assets/phrases/yes.webp'
 import noImg from '../assets/phrases/no.webp'
