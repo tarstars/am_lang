@@ -33,6 +33,7 @@ import europeImg from '../assets/alphabet/europe.webp'
 import fishImg from '../assets/alphabet/fish.webp'
 import halloImg from '../assets/alphabet/hallo.webp'
 import hareImg from '../assets/alphabet/hare.webp'
+import lambImg from '../assets/alphabet/lamb.webp'
 import moneyImg from '../assets/alphabet/money.webp'
 import motherImg from '../assets/alphabet/mother.webp'
 import radioImg from '../assets/alphabet/radio.webp'
@@ -443,6 +444,15 @@ const rawWordInfoList: WordInfo[] = [
       soundEn: ["s", "e", "gh", "a", "n"],
       wordRu: "стол",
       wordEn: "table",
+  },
+  {
+    image: lambImg,
+    wordUpper: ["ՈՒ", "Լ"],
+    wordLower: ["ու", "լ"],
+      soundRu: ["у", "л"],
+      soundEn: ["u", "l"],
+      wordRu: "ягнёнок",
+      wordEn: "lamb",
   },
 ]
 
