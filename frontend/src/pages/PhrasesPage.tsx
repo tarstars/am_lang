@@ -2,33 +2,23 @@ import polarOwl from '../assets/polar_owl.webp'
 import yesImg from '../assets/phrases/yes.webp'
 import noImg from '../assets/phrases/no.webp'
 import thankYouImg from '../assets/phrases/thank_you_hands_pressed.webp'
-import plasticBagImg from '../assets/phrases/plastic_bag.webp'
-import needPlasticBagImg from '../assets/phrases/do_you_need_plastic_bag.webp'
-import goodbyeImg from '../assets/phrases/goodby.webp'
+import youAreWelcomeImg from '../assets/phrases/you_are_welcome.webp'
 import helloImg from '../assets/phrases/hello.webp'
+import goodbyeImg from '../assets/phrases/goodby.webp'
+import whereIsTheToiletImg from '../assets/phrases/where_is_the_toilet.webp'
+import iWantThisImg from '../assets/phrases/i_want_this.webp'
 import dontUnderstandImg from '../assets/phrases/i_dont_understand.webp'
-import lightImg from '../assets/phrases/light.webp'
+import notSoGoodImg from '../assets/phrases/not_so_good.webp'
+import itsGoodImg from '../assets/phrases/its_good.webp'
+import howMuchIsItImg from '../assets/phrases/how_much_is_it.webp'
+import whereIsTheMetroImg from '../assets/phrases/where_is_the_metro.webp'
+import needPlasticBagImg from '../assets/phrases/do_you_need_plastic_bag.webp'
+import peaceImg from '../assets/phrases/peace.webp'
 import thankYouShopImg from '../assets/phrases/thank_you_in_the_shop.webp'
-import toDrinkImg from '../assets/phrases/to_drink.webp'
+import lightImg from '../assets/phrases/light.webp'
 import whatIsThatImg from '../assets/phrases/what_is_that.webp'
-import whereIsTheToilet from '../assets/phrases/where_is_the_toilet.webp'
+import myNameIsImg from '../assets/phrases/my_name_is.webp'
 import { useLanguage } from '../useLanguage'
-
-const phraseImages = [
-  yesImg,
-  noImg,
-  thankYouImg,
-  plasticBagImg,
-  needPlasticBagImg,
-  goodbyeImg,
-  whereIsTheToilet,
-  helloImg,
-  dontUnderstandImg,
-  lightImg,
-  thankYouShopImg,
-  toDrinkImg,
-  whatIsThatImg,
-]
 
 interface Phrase {
   image?: string
@@ -40,9 +30,10 @@ interface Phrase {
 }
 
 const phrases: Phrase[] = [
-  { hy: 'Այո', enPron: 'Ayo', ruPron: 'Аё', en: 'Yes', ru: 'Да' },
-  { hy: 'Ոչ', enPron: 'Voch', ruPron: 'Воч', en: 'No', ru: 'Нет' },
+  { image: yesImg, hy: 'Այո', enPron: 'Ayo', ruPron: 'Аё', en: 'Yes', ru: 'Да' },
+  { image: noImg, hy: 'Ոչ', enPron: 'Voch', ruPron: 'Воч', en: 'No', ru: 'Нет' },
   {
+    image: thankYouImg,
     hy: 'Շնորհակալություն',
     enPron: 'Shnorhakalutyun',
     ruPron: 'Шнорhакалутюн',
@@ -50,14 +41,16 @@ const phrases: Phrase[] = [
     ru: 'Спасибо',
   },
   {
+    image: youAreWelcomeImg,
     hy: 'Խնդրեմ',
     enPron: 'Khndrem',
     ruPron: 'Хндрем',
     en: "You're welcome / Please",
     ru: 'Пожалуйста',
   },
-  { hy: 'Բարեւ', enPron: 'Barev', ruPron: 'Барев', en: 'Hello', ru: 'Привет' },
+  { image: helloImg, hy: 'Բարեւ', enPron: 'Barev', ruPron: 'Барев', en: 'Hello', ru: 'Привет' },
   {
+    image: goodbyeImg,
     hy: 'Ցտեսություն',
     enPron: 'Tstesutyun',
     ruPron: 'Цтесуцюн',
@@ -65,6 +58,7 @@ const phrases: Phrase[] = [
     ru: 'До свидания',
   },
   {
+    image: whereIsTheToiletImg,
     hy: 'Որտեղ է զուգարանը',
     enPron: 'Vortegh e zugarany',
     ruPron: 'Вортех э зугараны',
@@ -72,6 +66,7 @@ const phrases: Phrase[] = [
     ru: 'Где туалет?',
   },
   {
+    image: iWantThisImg,
     hy: 'Ես ուզում եմ սա',
     enPron: 'Yes uzum em sa',
     ruPron: 'Йес узум эм са',
@@ -79,6 +74,7 @@ const phrases: Phrase[] = [
     ru: 'Я хочу это',
   },
   {
+    image: dontUnderstandImg,
     hy: 'Չեմ հասկանում',
     enPron: 'Chem haskanum',
     ruPron: 'Чем hасканум',
@@ -86,14 +82,16 @@ const phrases: Phrase[] = [
     ru: 'Я не понимаю',
   },
   {
+    image: notSoGoodImg,
     hy: 'Այդքան էլ լավ չէ',
     enPron: "Aydk’an el lav ch’e",
     ruPron: 'Айткан эл лав чэ',
     en: 'Not so good',
     ru: 'Не очень хорошо',
   },
-  { hy: 'Լավ է', enPron: 'Lav e', ruPron: 'Лав э', en: 'It’s good', ru: 'Хорошо' },
+  { image: itsGoodImg, hy: 'Լավ է', enPron: 'Lav e', ruPron: 'Лав э', en: 'It’s good', ru: 'Хорошо' },
   {
+    image: howMuchIsItImg,
     hy: 'Որքա՞ն արժի',
     enPron: "Vork’an arji?",
     ruPron: 'Ворк’ан аржи?',
@@ -101,6 +99,7 @@ const phrases: Phrase[] = [
     ru: 'Сколько это стоит?',
   },
   {
+    image: whereIsTheMetroImg,
     hy: 'Որտե՞ղ է մետրոն',
     enPron: 'Vortegh e metron?',
     ruPron: 'Вортех э метрон?',
@@ -108,6 +107,7 @@ const phrases: Phrase[] = [
     ru: 'Где метро?',
   },
   {
+    image: needPlasticBagImg,
     hy: 'Տոպրակ է պետք?',
     enPron: "Toprak e petk'?",
     ruPron: "Топрак э петк'?",
@@ -115,6 +115,7 @@ const phrases: Phrase[] = [
     ru: 'Нужен пакет?',
   },
   {
+    image: lightImg,
     hy: 'Ես հայ չեմ',
     enPron: 'Yes hay chem',
     ruPron: 'Йес хай чем',
@@ -122,6 +123,7 @@ const phrases: Phrase[] = [
     ru: 'Я не армянин',
   },
   {
+    image: peaceImg,
     hy: 'Խաղաղություն',
     enPron: 'Khaghaghutyun',
     ruPron: 'Хаhаhуцюн',
@@ -129,6 +131,7 @@ const phrases: Phrase[] = [
     ru: 'Мир',
   },
   {
+    image: thankYouShopImg,
     hy: 'Հաճելի օր',
     enPron: 'Hacheli or',
     ruPron: 'Хачели ор',
@@ -136,6 +139,7 @@ const phrases: Phrase[] = [
     ru: 'Хорошего дня',
   },
   {
+    image: lightImg,
     hy: 'Բարի գիշեր',
     enPron: 'Bari gisher',
     ruPron: 'Бари гишер',
@@ -143,6 +147,7 @@ const phrases: Phrase[] = [
     ru: 'Спокойной ночи',
   },
   {
+    image: whatIsThatImg,
     hy: 'Ի՞նչ է դա',
     enPron: 'Inch e da?',
     ruPron: 'Инч э да?',
@@ -150,6 +155,7 @@ const phrases: Phrase[] = [
     ru: 'Что это?',
   },
   {
+    image: myNameIsImg,
     hy: 'Իմ անունն է ...',
     enPron: 'Im anunn e ...',
     ruPron: 'Им анунн э ...',
@@ -171,7 +177,7 @@ export default function PhrasesPage() {
             className="bg-white rounded shadow overflow-hidden w-fit"
           >
             <img
-              src={phraseImages[i % phraseImages.length] || polarOwl}
+              src={p.image || polarOwl}
               alt="phrase illustration"
               className="object-cover w-full h-auto"
             />
