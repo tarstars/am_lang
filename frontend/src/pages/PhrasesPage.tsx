@@ -14,7 +14,7 @@ import howMuchIsItImg from '../assets/phrases/how_much_is_it.webp'
 import whereIsTheMetroImg from '../assets/phrases/where_is_the_metro.webp'
 import needPlasticBagImg from '../assets/phrases/do_you_need_plastic_bag.webp'
 import peaceImg from '../assets/phrases/peace.webp'
-import thankYouShopImg from '../assets/phrases/thank_you_in_the_shop.webp'
+import haveANiceDayImg from '../assets/phrases/have_a_nice_day.webp'
 import lightImg from '../assets/phrases/light.webp'
 import notArmenianImg from '../assets/phrases/i_am_not_armenian.webp'
 import whatIsThatImg from '../assets/phrases/what_is_that.webp'
@@ -132,7 +132,7 @@ const phrases: Phrase[] = [
     ru: 'Мир',
   },
   {
-    image: thankYouShopImg,
+    image: haveANiceDayImg,
     hy: 'Հաճելի օր',
     enPron: 'Hacheli or',
     ruPron: 'Хачели ор',
