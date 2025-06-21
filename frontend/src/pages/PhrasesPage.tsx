@@ -212,8 +212,7 @@ export default function PhrasesPage() {
         </div>
       ) : (
         <div>
-          <Card p={current} />
-          <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
             <button className="px-2 py-1 border rounded" onClick={() => setIndex(0)}>
               {t('nav_first')}
             </button>
@@ -255,6 +254,7 @@ export default function PhrasesPage() {
               {t('nav_last')}
             </button>
           </div>
+          <Card p={current} />
         </div>
       )}
     </div>
