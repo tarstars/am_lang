@@ -167,31 +167,95 @@ const phrases: Phrase[] = [
 
 export default function PhrasesPage() {
   const { t } = useLanguage()
+  const [mode, setMode] = useState<'single' | 'gallery'>('single')
+  const [index, setIndex] = useState(0)
+  const total = phrases.length
+
+  const Card = ({ p }: { p: Phrase }) => (
+    <div className="bg-white rounded shadow overflow-hidden w-fit max-w-md mx-auto">
+      <img
+        src={p.image || polarOwl}
+        alt="phrase illustration"
+        className="object-cover w-full max-h-[33vh]"
+      />
+      <div className="p-4 flex flex-col justify-center text-center">
+        <div className="font-bold text-2xl mb-1">{p.hy}</div>
+        <div className="text-lg">{p.enPron}</div>
+        <div className="text-lg mb-2">{p.ruPron}</div>
+        <div>{p.en}</div>
+        <div>{p.ru}</div>
+      </div>
+    </div>
+  )
+
+  const current = phrases[index]
 
   return (
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4">{t('phrases_title')}</h1>
-      <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(18rem,1fr))]">
-        {phrases.map((p, i) => (
-          <div
-            key={i}
-            className="bg-white rounded shadow overflow-hidden w-fit"
-          >
-            <img
-              src={p.image || polarOwl}
-              alt="phrase illustration"
-              className="object-cover w-full h-auto"
-            />
-            <div className="p-4 flex flex-col justify-center">
-              <div className="font-bold text-2xl mb-1">{p.hy}</div>
-              <div className="text-lg">{p.enPron}</div>
-              <div className="text-lg mb-2">{p.ruPron}</div>
-              <div>{p.en}</div>
-              <div>{p.ru}</div>
-            </div>
-          </div>
-        ))}
+      <div className="mb-4">
+        <select
+          className="border px-2 py-1"
+          value={mode}
+          onChange={(e) => setMode(e.target.value as 'single' | 'gallery')}
+        >
+          <option value="single">{t('phrases_mode_single')}</option>
+          <option value="gallery">{t('phrases_mode_gallery')}</option>
+        </select>
       </div>
+      {mode === 'gallery' ? (
+        <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(18rem,1fr))]">
+          {phrases.map((p, i) => (
+            <Card key={i} p={p} />
+          ))}
+        </div>
+      ) : (
+        <div>
+          <Card p={current} />
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
+            <button className="px-2 py-1 border rounded" onClick={() => setIndex(0)}>
+              {t('nav_first')}
+            </button>
+            <button
+              className="px-2 py-1 border rounded"
+              onClick={() => setIndex((i) => (i > 0 ? i - 1 : 0))}
+            >
+              {t('nav_back')}
+            </button>
+            <span>
+              {index + 1} / {total}
+            </span>
+            <label className="flex items-center gap-1">
+              {t('nav_card_number')}
+              <input
+                type="number"
+                min={1}
+                max={total}
+                value={index + 1}
+                onChange={(e) => {
+                  const v = parseInt(e.target.value)
+                  if (!isNaN(v)) {
+                    let val = v - 1
+                    if (val < 0) val = 0
+                    if (val >= total) val = total - 1
+                    setIndex(val)
+                  }
+                }}
+                className="w-16 border rounded px-1 text-center"
+              />
+            </label>
+            <button
+              className="px-2 py-1 border rounded"
+              onClick={() => setIndex((i) => (i < total - 1 ? i + 1 : i))}
+            >
+              {t('nav_next')}
+            </button>
+            <button className="px-2 py-1 border rounded" onClick={() => setIndex(total - 1)}>
+              {t('nav_last')}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
