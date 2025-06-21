@@ -16,6 +16,7 @@ import needPlasticBagImg from '../assets/phrases/do_you_need_plastic_bag.webp'
 import peaceImg from '../assets/phrases/peace.webp'
 import thankYouShopImg from '../assets/phrases/thank_you_in_the_shop.webp'
 import lightImg from '../assets/phrases/light.webp'
+import notArmenianImg from '../assets/phrases/i_am_not_armenian.webp'
 import whatIsThatImg from '../assets/phrases/what_is_that.webp'
 import myNameIsImg from '../assets/phrases/my_name_is.webp'
 import { useLanguage } from '../useLanguage'
@@ -115,7 +116,7 @@ const phrases: Phrase[] = [
     ru: 'Нужен пакет?',
   },
   {
-    image: lightImg,
+    image: notArmenianImg,
     hy: 'Ես հայ չեմ',
     enPron: 'Yes hay chem',
     ruPron: 'Йес хай чем',
