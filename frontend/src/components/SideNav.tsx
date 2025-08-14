@@ -13,7 +13,7 @@ export default function SideNav() {
   ]
 
   return (
-    <nav className="fixed w-64 min-h-screen bg-sky-200 text-blue-900 p-6 flex flex-col justify-between">
+    <nav className="fixed w-64 min-h-screen bg-sky-200 text-blue-900 p-6 flex flex-col justify-between text-sm sm:text-base">
       <div>
         <Link to="/" className="block uppercase font-bold mb-4">
           {t('welcome_title')}
